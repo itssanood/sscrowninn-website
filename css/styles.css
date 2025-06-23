@@ -1,19 +1,39 @@
 
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
-.hero { background: #222; color: #fff; padding: 2em; text-align: center; }
-.rooms { display: flex; flex-direction: column; padding: 1em; }
-.room { background: white; padding: 1em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-footer { background: #111; color: #fff; text-align: center; padding: 1em; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+.hero {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 2.5em 1em;
+  text-align: center;
+}
+.rooms {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.room {
+  background: white;
+  padding: 1em;
+  margin: 0.5em auto;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 .room-gallery {
   padding: 40px 20px;
   background: #fff;
-  color: #111;
   text-align: center;
 }
 .room-gallery h2 {
   margin-bottom: 1em;
   font-size: 1.8em;
-  color: #333;
 }
 .gallery-grid {
   display: grid;
@@ -24,8 +44,14 @@ footer { background: #111; color: #fff; text-align: center; padding: 1em; }
 }
 .gallery-grid img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   object-fit: cover;
+}
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 1em;
+  font-size: 0.9em;
 }
