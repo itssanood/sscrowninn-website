@@ -3,28 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SS CROWN INN</title>
+  <title>SS CROWN INN - Book Your Stay</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header><h1>SS CROWN INN</h1></header>
-  <main>
-    <section>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>SS CROWN INN</h1>
+    <p class="tagline">Premium Comfort at Affordable Rates</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <section class="booking-card">
       <h2>Book Your Stay</h2>
       <form>
-        <label>Check-in: <input type="date" /></label>
-        <label>Check-out: <input type="date" /></label>
-        <label>Room Type:
-          <select>
-            <option>Standard Non-AC - ₹1400</option>
-            <option>Deluxe AC with Balcony - ₹1700</option>
+        <label>Check-in Date:<br />
+          <input type="date" name="checkin" required />
+        </label>
+        <label>Check-out Date:<br />
+          <input type="date" name="checkout" required />
+        </label>
+        <label>Room Type:<br />
+          <select name="room">
+            <option>Standard Non-AC – ₹1400</option>
+            <option>Deluxe AC with Balcony – ₹1700</option>
           </select>
         </label>
-        <button type="submit">Check Availability</button>
+        <a class="book-btn" target="_blank"
+          href="https://wa.me/919000000000?text=🛎️ Booking Request from SS CROWN INN%0A📅 Dates: CHECKIN - CHECKOUT%0A🏨 Room: ROOM_TYPE%0A👤 Name: YOUR_NAME%0A📞 Phone: YOUR_PHONE%0A💰 Price: ₹XXXX%0A%0APlease confirm this booking.">
+          Confirm Booking via WhatsApp
+        </a>
       </form>
-      <a href="https://wa.me/919000000000?text=Booking%20Request%20from%20SS%20CROWN%20INN">Send on WhatsApp</a>
     </section>
   </main>
-  <footer>&copy; 2025 SS CROWN INN</footer>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 SS CROWN INN | Location: Your City | Contact: +91-90000-00000</p>
+  </footer>
 </body>
 </html>
