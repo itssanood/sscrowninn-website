@@ -1,0 +1,1 @@
+// JS logic placeholder for future dynamic booking flow
