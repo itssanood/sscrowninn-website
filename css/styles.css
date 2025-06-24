@@ -1,98 +1,109 @@
-body, html {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  box-sizing: border-box;
 }
 
-section.full-screen {
+body, html {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+section.fullscreen {
   height: 100vh;
-  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
+  color: #fff;
+  padding: 2rem;
 }
 
 .hero {
-  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat;
+  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat fixed;
   position: relative;
-  color: #fff;
-  text-align: center;
 }
-
-.hero .overlay {
+.hero::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(4px);
+  z-index: 0;
+}
+.hero-content, .review-grid {
+  position: relative;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
 }
 
-.hero-content {
-  position: relative;
-  top: 20%;
-  z-index: 2;
-}
-
-.review-section {
-  position: relative;
-  z-index: 2;
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
   margin-top: 2rem;
 }
-
-.grid-reviews {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
 .review-card {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
   padding: 1rem;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
 }
 
-.rooms .room-slide {
-  display: none;
-  text-align: center;
-  padding: 2rem;
+.rooms, .availability, footer {
+  padding: 4rem 2rem;
 }
 
-.rooms .room-slide.active {
+.room-card {
+  margin: 2rem auto;
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.room-card img {
+  width: 100%;
+  height: auto;
   display: block;
 }
+.room-card h2 {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
 
-.check-availability .card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 1rem;
+.availability form {
   max-width: 500px;
   margin: auto;
-  margin-top: 10%;
-  color: white;
-  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-input, select, button {
-  display: block;
-  width: 100%;
-  margin: 0.5rem 0;
+.availability input,
+.availability select,
+.availability button {
   padding: 0.75rem;
-  border-radius: 0.5rem;
   border: none;
+  border-radius: 6px;
 }
-
-.btn {
-  background-color: #ffd700;
+.availability button {
+  background: gold;
   color: black;
   font-weight: bold;
-  cursor: pointer;
 }
 
 footer {
-  text-align: center;
-  padding: 1rem;
   background: #111;
-  color: white;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
 }
