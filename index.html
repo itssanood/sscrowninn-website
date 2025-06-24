@@ -1,61 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSCrownInn - Hotel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SS Crown Inn – Book Now</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to SSCrownInn</h1>
-    </header>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Luxury Hotel at Your Service</h1>
-        <p>Your luxurious stay awaits. Explore our exclusive offers and book your stay now!</p>
+  <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1500&q=80');">
+    <div class="overlay">
+      <h1>SS Crown Inn</h1>
+      <p>Comfort & Elegance in the Heart of Bengaluru</p>
     </div>
+  </header>
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About SSCrownInn</h2>
-        <p>We provide exceptional services with a view to creating memorable experiences. Our team ensures a relaxing and luxurious stay for all our guests.</p>
-        <img src="images/about_image.jpg" alt="Hotel Overview">
-    </section>
+  <section class="booking-form">
+    <h2>Book a Room</h2>
+    <form id="bookingForm">
+      <label>Check-in: <input type="date" name="checkin" required></label>
+      <label>Check-out: <input type="date" name="checkout" required></label>
+      <label>Room Type:
+        <select name="room">
+          <option value="Standard Non-AC">Standard Non-AC – ₹1400 + 12% GST</option>
+          <option value="Deluxe AC with Balcony">Deluxe AC – ₹1700 + 12% GST</option>
+          <option value="Deluxe Family Room">Family Room – ₹2500 + 12% GST</option>
+        </select>
+      </label>
+      <label>Guests: <input type="number" name="guests" min="1" max="6" required></label>
+      <label>Name: <input type="text" name="name" required></label>
+      <label>Phone: <input type="tel" name="phone" required></label>
+      <button type="submit">Send Booking via WhatsApp</button>
+    </form>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>Room Service</h3>
-            <img src="images/service_room.jpg" alt="Room Service">
-            <p>Enjoy the comfort and luxury of room service, available at your convenience.</p>
-        </div>
-        <div class="service-item">
-            <h3>Restaurant</h3>
-            <img src="images/service_dining.jpg" alt="Restaurant">
-            <p>Indulge in gourmet meals prepared by top chefs at our in-house restaurant.</p>
-        </div>
-        <div class="service-item">
-            <h3>Spa and Wellness</h3>
-            <img src="images/service_spa.jpg" alt="Spa">
-            <p>Relax and rejuvenate at our spa with a variety of wellness treatments.</p>
-        </div>
-    </section>
+  <footer>
+    <p>📍 #490, OTC Road, Bengaluru - 560 053</p>
+    <p>📞 WhatsApp: +91 6364309962</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 SSCrownInn</p>
-        <div class="social-media">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
