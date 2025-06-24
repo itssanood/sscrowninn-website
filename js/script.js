@@ -1,5 +1,7 @@
-// Fade-in animation using Intersection Observer
-const observer = new IntersectionObserver((entries) => {
+// Animate all fade-in and room-card sections
+const fadeElements = document.querySelectorAll('.fade-in, .room-card');
+
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
@@ -9,6 +11,4 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.1,
 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
-  observer.observe(el);
-});
+fadeElements.forEach(el => observer.observe(el));
