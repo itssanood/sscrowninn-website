@@ -1,49 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SS Crown Inn</title>
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/scripts.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section-1 {
+  background-image: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png');
+}
+
+.section-1 .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.section-content {
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.section-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.section-content p {
+  font-size: 1.2rem;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+  </style>
 </head>
 <body>
-  <main class="snap-container">
-    <section class="section section-1">
-      <div class="overlay">
-        <header class="hero">
-          <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" class="logo" />
-          <h1>Welcome to SS Crown Inn</h1>
-          <p>Experience Comfort and Elegance</p>
-          <a href="#about" class="btn">About Us</a>
-        </header>
-        <div class="reviews-section">
-          <h2>What Our Customers Say</h2>
-          <div class="review-icons">
-            <span>⭐ 4.7 Google</span>
-            <span>⭐ 4.9 Facebook</span>
-            <span>⭐ 4.8 TripAdvisor</span>
-            <span>⭐ 4.6 Booking.com</span>
-            <span>⭐ 4.5 MakeMyTrip</span>
-          </div>
-          <div class="review-cards">
-            <div class="review-card"><p>"Excellent service!"<br>- Balachandar K</p></div>
-            <div class="review-card"><p>"Neat and clean rooms."<br>- Mary T.</p></div>
-            <div class="review-card"><p>"Best location in the city."<br>- Bryan C.</p></div>
-            <div class="review-card"><p>"Affordable and comfy."<br>- Sunil A.</p></div>
-            <div class="review-card"><p>"Perfect for family stays."<br>- Leena D.</p></div>
-            <div class="review-card"><p>"Good food and service."<br>- Amit S.</p></div>
-          </div>
-        </div>
-        <footer class="footer">
-          <div class="footer-content">
-            <span class="left">📞 +91-XXXXXXXXXX</span>
-            <span class="center">SS Crown Inn <a id="about">| About Us</a></span>
-            <span class="right">📍 Bangalore</span>
-          </div>
-        </footer>
-      </div>
-    </section>
+  <main class="snap-container"><!-- Section 1: Welcome -->
+<section class="section section-1">
+  <div class="overlay"></div>
+  <div class="section-content">
+    <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" class="logo" />
+    <h1>Welcome to SS Crown Inn</h1>
+    <p>Experience Comfort, Elegance, and Affordability in the Heart of Bengaluru</p>
+  </div>
+</section>
+
+<!-- Section 2: Rooms -->
+<section class="section section-2" style="background: #111; color: white;">
+  <div class="section-content">
+    <h1>Our Rooms</h1>
+    <p>Choose from Standard, Deluxe, or Family rooms</p>
+  </div>
+</section>
+
+<!-- Section 3: Gallery or Facilities -->
+<section class="section section-3" style="background: #222; color: white;">
+  <div class="section-content">
+    <h1>Facilities</h1>
+    <p>High-speed Wi-Fi, 24/7 Service, AC & Non-AC Rooms, and more</p>
+  </div>
+</section>
+
+<!-- Section 4: Location -->
+<section class="section section-4" style="background: #000; color: white;">
+  <div class="section-content">
+    <h1>Find Us</h1>
+    <p>#490, OTC Road, Bengaluru - 560 053</p>
+    <iframe src="https://www.google.com/maps?q=12.9716,77.5946&hl=en&z=14&amp;output=embed" width="300" height="200" style="border:0;"></iframe>
+  </div>
+</section>
+
   </main>
 </body>
 </html>
