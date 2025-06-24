@@ -5,31 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SS Crown Inn – Book Now</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1500&q=80');">
+  <header class="hero">
     <div class="overlay">
-      <h1>SS Crown Inn</h1>
-      <p>Comfort & Elegance in the Heart of Bengaluru</p>
+      <h2>WELCOME TO SS CROWN INN</h2>
+      <h1>Experience Comfort and Elegance</h1>
+      <a href="#rooms" class="btn">BOOK NOW</a>
     </div>
   </header>
 
-  <section class="booking-form">
-    <h2>Book a Room</h2>
-    <form id="bookingForm">
-      <label>Check-in: <input type="date" name="checkin" required></label>
-      <label>Check-out: <input type="date" name="checkout" required></label>
-      <label>Room Type:
-        <select name="room">
-          <option value="Standard Non-AC">Standard Non-AC – ₹1400 + 12% GST</option>
-          <option value="Deluxe AC with Balcony">Deluxe AC – ₹1700 + 12% GST</option>
-          <option value="Deluxe Family Room">Family Room – ₹2500 + 12% GST</option>
-        </select>
-      </label>
-      <label>Guests: <input type="number" name="guests" min="1" max="6" required></label>
-      <label>Name: <input type="text" name="name" required></label>
-      <label>Phone: <input type="tel" name="phone" required></label>
-      <button type="submit">Send Booking via WhatsApp</button>
+  <section class="section" id="rooms">
+    <h2 class="section-title">Our Rooms</h2>
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="https://via.placeholder.com/400x250?text=Standard+Non-AC" alt="Standard Non-AC" />
+        <h3>Standard Non-AC</h3>
+        <p class="price">₹1568 <span>inc taxes</span></p>
+        <p class="features">📶 WiFi</p>
+        <a href="#" class="details">View Details ›</a>
+      </div>
+      <div class="room-card">
+        <img src="https://via.placeholder.com/400x250?text=Deluxe+AC+Balcony" alt="Deluxe AC Room & Balcony" />
+        <h3>Deluxe AC Room & Balcony</h3>
+        <p class="price">₹1804 <span>inc taxes</span></p>
+        <p class="features">📶 WiFi</p>
+        <a href="#" class="details">View Details ›</a>
+      </div>
+      <div class="room-card">
+        <img src="https://via.placeholder.com/400x250?text=Family+Room" alt="Deluxe Family Room" />
+        <h3>Deluxe Family Room</h3>
+        <p class="price">₹2900 <span>inc taxes</span></p>
+        <p class="features">❄️ AC</p>
+        <a href="#" class="details">View Details ›</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="availability">
+    <h2 class="section-title">Check Availability</h2>
+    <form class="availability-form">
+      <input type="date" placeholder="Check-in Date" required />
+      <input type="date" placeholder="Check-out Date" required />
+      <input type="number" placeholder="Guests" min="1" max="6" required />
+      <button type="submit">Check Now</button>
     </form>
   </section>
 
@@ -38,6 +58,5 @@
     <p>📞 WhatsApp: +91 6364309962</p>
   </footer>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
