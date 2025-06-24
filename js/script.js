@@ -1,2 +1,14 @@
-// JS placeholder – future enhancements can go here.
-console.log("SS Crown Inn Website Loaded");
+// Fade-in animation using Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1,
+});
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
