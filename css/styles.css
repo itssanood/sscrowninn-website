@@ -145,3 +145,22 @@ html, body {
 .room-card:nth-child(3) {
   transition-delay: 0.5s;
 }
+.bg-section {
+  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat fixed;
+  position: relative;
+  color: white;
+}
+
+.bg-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.bg-section > * {
+  z-index: 1;
+  position: relative;
+}
