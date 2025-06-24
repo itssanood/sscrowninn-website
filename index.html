@@ -5,213 +5,60 @@
   <title>SS Crown Inn</title>
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/scripts.js"></script>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Segoe UI', sans-serif;
-    }.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.section {
-  scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: white;
-}
-
-.section-1 {
-  background-image: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png');
-}
-
-.section-1 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.section-content {
-  z-index: 2;
-  text-align: center;
-  padding: 2rem;
-}
-
-.section-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.section-content p {
-  font-size: 1.2rem;
-}
-
-.logo {
-  width: 100px;
-  margin-bottom: 1rem;
-}
-
-.room-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.room-card {
-  background-color: #1a1a1a;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.room-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.room-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.booking-form {
-  margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.booking-form input,
-.booking-form select {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-
-.booking-form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.footer {
-  background: #000;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  font-size: 0.9rem;
-}
-
-  </style>
 </head>
 <body>
-  <main class="snap-container"><!-- Section 1: Welcome -->
-<section class="section section-1">
-  <div class="overlay"></div>
-  <div class="section-content">
-    <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" class="logo" />
-    <h1>Welcome to SS Crown Inn</h1>
-    <p>Experience Comfort, Elegance, and Affordability in the Heart of Bengaluru</p>
-  </div>
-</section>
-
-<!-- Section 2: Our Rooms -->
-<section class="section section-2" style="background: #111;">
-  <div class="section-content">
-    <h1>Our Rooms</h1>
-    <p>Choose from Standard, Deluxe, or Family rooms</p>
-    <div class="room-cards">
-      <div class="room-card">
-        <img src="https://i.postimg.cc/KYWrS6vH/standard-room.jpg" alt="Standard Room">
-        <h2>Standard Non-AC Room</h2>
-        <p>₹1400 + 12% GST</p>
+  <!-- Section 1: Welcome & Reviews -->
+  <section class="section section-1">
+    <div class="overlay"></div>
+    <div class="section-content">
+      <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" class="logo" />
+      <h1>Welcome to SS Crown Inn</h1>
+      <p>Experience Comfort, Elegance, and Affordability in the Heart of Bengaluru</p><div class="review-summary">
+    <h2>What Our Customers Say</h2>
+    <div class="review-icons">
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" /> 4.7</span>
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Logo_(2019).png" alt="Facebook" /> 4.9</span>
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Tripadvisor_Icon_logo.svg" alt="TripAdvisor" /> 4.8</span>
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Booking.com_logo.svg" alt="Booking" /> 4.6</span>
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/MakeMyTrip_Logo.svg" alt="MakeMyTrip" /> 4.5</span>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <h3>Balachandar K</h3>
+        <p>★★★★★<br/>Excellent service!</p>
       </div>
-      <div class="room-card">
-        <img src="https://i.postimg.cc/t4fXmpFL/deluxe-room.jpg" alt="Deluxe Room">
-        <h2>Deluxe AC Room with Balcony</h2>
-        <p>₹1700 + 12% GST</p>
+      <div class="review-card">
+        <h3>Mary T.</h3>
+        <p>★★★★★<br/>Neat and clean rooms.</p>
       </div>
-      <div class="room-card">
-        <img src="https://i.postimg.cc/VNcwGPGz/family-room.jpg" alt="Family Room">
-        <h2>Deluxe Family Room</h2>
-        <p>₹2500 + 12% GST</p>
+      <div class="review-card">
+        <h3>Bryan C.</h3>
+        <p>★★★★★<br/>Best location in the city.</p>
+      </div>
+      <div class="review-card">
+        <h3>Sunil A.</h3>
+        <p>★★★★★<br/>Affordable and comfy.</p>
+      </div>
+      <div class="review-card">
+        <h3>Leena D.</h3>
+        <p>★★★★★<br/>Perfect for family stays.</p>
+      </div>
+      <div class="review-card">
+        <h3>Amit S.</h3>
+        <p>★★★★★<br/>Good food and service.</p>
       </div>
     </div>
-    <div class="booking-form">
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="tel" placeholder="Phone Number" required />
-        <input type="date" placeholder="Check-in" required />
-        <input type="date" placeholder="Check-out" required />
-        <select>
-          <option>Standard Room</option>
-          <option>Deluxe Room</option>
-          <option>Family Room</option>
-        </select>
-        <button type="submit">Book Now</button>
-      </form>
-    </div>
   </div>
-</section>
+</div>
 
-<!-- Section 3: Facilities -->
-<section class="section section-3" style="background: #222;">
-  <div class="section-content">
-    <h1>Facilities</h1>
-    <p>High-speed Wi-Fi, 24/7 Room Service, AC & Non-AC Options, Power Backup, Secure Parking</p>
+<footer>
+  <div class="footer">
+    <span class="footer-left">📞 +91-9876543210</span>
+    <span class="footer-center">SS Crown Inn</span>
+    <span class="footer-right">📍 Bengaluru</span>
+    <div class="about-us-link"><a href="#about">About Us</a></div>
   </div>
-</section>
-
-<!-- Section 4: Location -->
-<section class="section section-4" style="background: #000;">
-  <div class="section-content">
-    <h1>Find Us</h1>
-    <p>#490, OTC Road, Bengaluru - 560 053</p>
-    <iframe src="https://www.google.com/maps?q=12.9716,77.5946&hl=en&z=14&amp;output=embed" width="300" height="200" style="border:0;"></iframe>
-    <p>WhatsApp us at <a href="https://wa.me/916364309962" style="color: #0f0;">+91 63643 09962</a></p>
-  </div>
-</section>
-
-<!-- Section 5: Reviews -->
-<section class="section section-5" style="background: #111;">
-  <div class="section-content">
-    <h1>Guest Reviews</h1>
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-721511f9-0187-4c92-a7c2-b5d3d9d4fd8f" data-elfsight-app-lazy></div>
-  </div>
-</section>
-
-<!-- Section 6: Footer -->
-<footer class="footer">
-  <p>SS Crown Inn, Bengaluru | +91 63643 09962 | #490, OTC Road</p>
 </footer>
 
-  </main>
-</body>
+  </section>  <!-- More sections will follow here (Rooms, Facilities, Location, etc.) --></body>
 </html>
