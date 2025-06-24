@@ -1,24 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SS Crown Inn – Welcome</title>
   <link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  <!-- Hero Section -->
-  <section class="hero">
+.hero {
+  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.btn {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.room-cards, .reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.room-card, .review-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+.room-card.show, .review-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.room-card img, .review-avatar {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.review-source {
+  width: 20px;
+}
+
+.review-stars {
+  color: #f5a623;
+}
+
+#about {
+  background: #f9f9f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>  <!-- Hero Section -->  <section class="hero">
     <div class="hero-overlay">
       <h1>Welcome to SS Crown Inn</h1>
       <p>Experience Comfort and Elegance</p>
-      <a href="#rooms" class="btn">Book Now</a>
+      <a href="#about" class="btn">About Us</a>
     </div>
-  </section>
-
-  <!-- Our Rooms -->
-  <section id="rooms" class="section">
+  </section>  <!-- About Section -->  <section id="about">
+    <h2 class="section-title">About SS Crown Inn</h2>
+    <p>Located in the heart of Bengaluru, SS Crown Inn offers a blend of luxury and affordability, perfect for business and leisure travelers.</p>
+  </section>  <!-- Rooms Section -->  <section id="rooms">
     <h2 class="section-title">Our Rooms</h2>
     <div class="room-cards">
       <div class="room-card">
@@ -43,55 +141,55 @@
         <a href="#">View Details</a>
       </div>
     </div>
-  </section>
-
-  <!-- Customer Reviews -->
-  <section class="reviews-grid-section">
-    <h2 class="section-title">What our customers say</h2>
+  </section>  <!-- Reviews Section -->  <section id="reviews">
+    <h2 class="section-title">What Our Customers Say</h2>
     <div class="reviews-grid">
-
       <div class="review-card">
         <div class="review-header">
-          <img src="https://i.pravatar.cc/50?u=1" alt="User" class="review-avatar">
+          <img src="https://i.pravatar.cc/50?u=1" class="review-avatar">
           <div>
-            <strong>Balachandar K</strong><br>
-            <small>1 day ago</small>
+            <strong>Balachandar K</strong><br><small>1 day ago</small>
           </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="review-source" alt="Google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="review-source">
         </div>
         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">Left a 5-star rating. Excellent!</p>
+        <p>Left a 5-star rating. Excellent!</p>
       </div>
-
       <div class="review-card">
         <div class="review-header">
-          <img src="https://i.pravatar.cc/50?u=2" alt="User" class="review-avatar">
+          <img src="https://i.pravatar.cc/50?u=2" class="review-avatar">
           <div>
-            <strong>Bryan Choi</strong><br>
-            <small>2 days ago</small>
+            <strong>Bryan Choi</strong><br><small>2 days ago</small>
           </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="review-source" alt="Google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="review-source">
         </div>
         <div class="review-stars">⭐⭐⭐⭐</div>
-        <p class="review-text">Parking is a bit of hassle, but awesome place to visit.</p>
+        <p>Parking is a bit of hassle, but awesome place to visit.</p>
       </div>
-
       <div class="review-card">
         <div class="review-header">
-          <img src="https://i.pravatar.cc/50?u=3" alt="User" class="review-avatar">
+          <img src="https://i.pravatar.cc/50?u=3" class="review-avatar">
           <div>
-            <strong>Mary</strong><br>
-            <small>5 days ago</small>
+            <strong>Mary</strong><br><small>5 days ago</small>
           </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="review-source" alt="Amazon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="review-source">
         </div>
         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">Great pics. Cute book!</p>
+        <p>Great pics. Cute book!</p>
       </div>
-
     </div>
-  </section>
+  </section>  <script>
+    // Show cards on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
 
-  <script src="js/script.js"></script>
-</body>
+    document.querySelectorAll('.room-card, .review-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script></body>
 </html>
