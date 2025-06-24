@@ -2,86 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SS Crown Inn</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
   <script defer src="js/script.js"></script>
 </head>
 <body>
-  <section class="hero full-screen">
-    <div class="overlay"></div>
+  <!-- Hero Section -->
+  <section class="fullscreen hero">
     <div class="hero-content">
       <h1>Welcome to SS Crown Inn</h1>
-      <p>Experience Comfort and Elegance</p>
-      <a href="#about" class="btn">About Us</a>
-      <div class="ratings">
-        <span><img src="https://img.icons8.com/color/24/google-logo.png"/> Google 4.7</span>
-        <span><img src="https://img.icons8.com/color/24/facebook-new.png"/> Facebook 4.9</span>
-        <span><img src="https://img.icons8.com/color/24/tripadvisor.png"/> Tripadvisor 4.8</span>
-        <span><img src="https://img.icons8.com/color/24/booking.png"/> Booking.com 4.6</span>
-        <span><img src="https://img.icons8.com/color/24/makemytrip.png"/> MakeMyTrip 4.5</span>
-      </div>
+      <p>Experience comfort in the heart of Bengaluru</p>
     </div>
-    <div class="review-section">
-      <div class="grid-reviews">
-        <div class="review-card">"Excellent service and hospitality." - Balachandar K ⭐⭐⭐⭐⭐</div>
-        <div class="review-card">"Great room and good location." - Bryan Choi ⭐⭐⭐⭐⭐</div>
-        <div class="review-card">"Best view and clean rooms." - Tsu ⭐⭐⭐⭐⭐</div>
-        <div class="review-card">"Friendly staff, good food." - Mary ⭐⭐⭐⭐⭐</div>
-        <div class="review-card">"Great value for money!" - Sunil Kumar ⭐⭐⭐⭐⭐</div>
-        <div class="review-card">"Comfortable beds and nice ambiance." - Guest ⭐⭐⭐⭐⭐</div>
-      </div>
-      <button class="btn view-more">View More</button>
+    <div class="review-grid">
+      <div class="review-card">"Excellent service and hospitality." - ⭐⭐⭐⭐⭐</div>
+      <div class="review-card">"Clean rooms and great staff." - ⭐⭐⭐⭐⭐</div>
+      <div class="review-card">"Highly recommended for families." - ⭐⭐⭐⭐⭐</div>
+      <div class="review-card">"Top-notch amenities." - ⭐⭐⭐⭐⭐</div>
+      <div class="review-card">"Affordable and cozy." - ⭐⭐⭐⭐⭐</div>
+      <div class="review-card">"Great experience overall!" - ⭐⭐⭐⭐⭐</div>
     </div>
   </section>
 
-  <section class="rooms full-screen">
-    <div class="room-slide active">
-      <img src="https://source.unsplash.com/800x600/?hotel,room" alt="Standard Non-AC" />
-      <h2>Standard Non-AC</h2>
-      <p>₹1568 inc taxes</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/ffffff/wifi.png"/> WiFi</p>
+  <!-- Rooms -->
+  <section class="rooms">
+    <div class="room-card">
+      <img src="https://source.unsplash.com/800x500/?hotel,room" alt="Standard Room">
+      <h2>Standard Non-AC - ₹1568 (incl. GST)</h2>
     </div>
-    <div class="room-slide">
-      <img src="https://source.unsplash.com/801x600/?hotel,room" alt="Deluxe AC Room & Balcony" />
-      <h2>Deluxe AC Room & Balcony</h2>
-      <p>₹1804 inc taxes</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/ffffff/wifi.png"/> WiFi <img src="https://img.icons8.com/ios-filled/20/ffffff/air-conditioner.png"/> AC</p>
+    <div class="room-card">
+      <img src="https://source.unsplash.com/801x500/?hotel,room" alt="Deluxe Room">
+      <h2>Deluxe AC with Balcony - ₹1904 (incl. GST)</h2>
     </div>
-    <div class="room-slide">
-      <img src="https://source.unsplash.com/802x600/?hotel,room" alt="Deluxe Family Room" />
-      <h2>Deluxe Family Room</h2>
-      <p>₹2900 inc taxes</p>
-      <p><img src="https://img.icons8.com/ios-filled/20/ffffff/wifi.png"/> WiFi <img src="https://img.icons8.com/ios-filled/20/ffffff/air-conditioner.png"/> AC</p>
+    <div class="room-card">
+      <img src="https://source.unsplash.com/802x500/?hotel,room" alt="Family Room">
+      <h2>Deluxe Family Room - ₹2500 (incl. GST)</h2>
     </div>
   </section>
 
-  <section class="check-availability full-screen">
-    <div class="card">
-      <h2>Check Availability</h2>
-      <form>
-        <input type="date" placeholder="Check-in Date" />
-        <input type="date" placeholder="Check-out Date" />
-        <select>
-          <option value="1">1 Guest</option>
-          <option value="2">2 Guests</option>
-          <option value="3">3 Guests</option>
-        </select>
-        <select>
-          <option>Standard Non-AC</option>
-          <option>Deluxe AC with Balcony</option>
-          <option>Deluxe Family Room</option>
-        </select>
-        <button class="btn">Search Rooms</button>
-      </form>
-    </div>
+  <!-- Availability Form -->
+  <section class="availability">
+    <h2>Check Availability</h2>
+    <form>
+      <input type="date" required />
+      <input type="date" required />
+      <select>
+        <option value="Standard">Standard Non-AC</option>
+        <option value="Deluxe">Deluxe AC</option>
+        <option value="Family">Family Room</option>
+      </select>
+      <input type="number" placeholder="Number of Guests" min="1" required />
+      <button>Book Now</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© SS Crown Inn, #490, OTC Road, Bengaluru - 560 053</p>
-    <p><a href="https://wa.me/916364309962">WhatsApp: +91 6364309962</a></p>
-    <p><a href="#about">About</a></p>
+    <p><a href="https://wa.me/916364309962" style="color: gold;">+91 6364309962 (WhatsApp)</a></p>
+    <p><a href="#about" style="color: #aaa;">About</a></p>
   </footer>
 </body>
 </html>
