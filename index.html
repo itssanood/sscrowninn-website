@@ -1,191 +1,82 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SS Crown Inn – Welcome</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-    }section {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero {
-  position: relative;
-  color: white;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover fixed no-repeat;
-  filter: brightness(0.4) blur(4px);
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 800px;
-}
-
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
-.btn {
-  background: #fff;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.room-cards, .reviews-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0 1rem;
-}
-
-.room-card, .review-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-in-out;
-}
-
-.room-card.show, .review-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.room-card img, .review-avatar {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.review-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.review-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.review-source {
-  width: 20px;
-}
-
-.review-stars {
-  color: #f5a623;
-}
-
-#about {
-  background: #f9f9f9;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.review-platforms {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0 1rem 0;
-  flex-wrap: wrap;
-}
-
-.platform {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  color: white;
-}
-
-.platform img {
-  width: 20px;
-}
-
-.load-more {
-  margin-top: 1rem;
-  background: #eee;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS Crown Inn</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script defer src="js/script.js"></script>
 </head>
-<body>  <!-- Hero Section -->  <section class="hero">
-    <div class="hero-overlay">
+<body>
+  <section class="hero full-screen">
+    <div class="overlay"></div>
+    <div class="hero-content">
       <h1>Welcome to SS Crown Inn</h1>
       <p>Experience Comfort and Elegance</p>
-      <a href="#about" class="btn">About Us</a><!-- Reviews Summary inside Hero -->
-  <div class="review-platforms">
-    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"> Google 4.7</div>
-    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Facebook_Logo_2023.png"> Facebook 4.9</div>
-    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Tripadvisor_Icon.png"> Tripadvisor 4.8</div>
-    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Booking.com_logo.svg"> Booking.com 4.6</div>
-    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/MakeMyTrip_Logo.svg"> MakeMyTrip 4.5</div>
-  </div>
-</div>
-
-  </section>  <!-- Remaining content (About, Rooms, Reviews) stays the same -->  <script>
-    // Show cards on scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-
-    document.querySelectorAll('.room-card, .review-card').forEach(card => {
-      observer.observe(card);
-    });
-  </script></body>
+      <a href="#about" class="btn">About Us</a>
+      <div class="ratings">
+        <span><img src="https://img.icons8.com/color/24/google-logo.png"/> Google 4.7</span>
+        <span><img src="https://img.icons8.com/color/24/facebook-new.png"/> Facebook 4.9</span>
+        <span><img src="https://img.icons8.com/color/24/tripadvisor.png"/> Tripadvisor 4.8</span>
+        <span><img src="https://img.icons8.com/color/24/booking.png"/> Booking.com 4.6</span>
+        <span><img src="https://img.icons8.com/color/24/makemytrip.png"/> MakeMyTrip 4.5</span>
+      </div>
+    </div>
+    <div class="review-section">
+      <div class="grid-reviews">
+        <!-- Grid of 6 reviews will go here -->
+        <!-- Placeholder for now -->
+        <div class="review-card">"Excellent service and hospitality." - Balachandar K ⭐⭐⭐⭐⭐</div>
+        <div class="review-card">"Great room and good location." - Bryan Choi ⭐⭐⭐⭐⭐</div>
+        <div class="review-card">"Best view and clean rooms." - Tsu ⭐⭐⭐⭐⭐</div>
+        <div class="review-card">"Friendly staff, good food." - Mary ⭐⭐⭐⭐⭐</div>
+        <div class="review-card">"Great value for money!" - Sunil Kumar ⭐⭐⭐⭐⭐</div>
+        <div class="review-card">"Comfortable beds and nice ambiance." - Guest ⭐⭐⭐⭐⭐</div>
+      </div>
+      <button class="btn view-more">View More</button>
+    </div>
+  </section>  <section class="rooms full-screen">
+    <div class="room-slide active">
+      <img src="https://source.unsplash.com/800x600/?hotel,room" alt="Standard Non-AC">
+      <h2>Standard Non-AC</h2>
+      <p>₹1568 inc taxes</p>
+      <p><img src="icons/wifi.svg" alt="WiFi icon"> WiFi</p>
+    </div>
+    <div class="room-slide">
+      <img src="https://source.unsplash.com/801x600/?hotel,room" alt="Deluxe AC Room & Balcony">
+      <h2>Deluxe AC Room & Balcony</h2>
+      <p>₹1804 inc taxes</p>
+      <p><img src="icons/wifi.svg"> WiFi <img src="icons/ac.svg"> AC</p>
+    </div>
+    <div class="room-slide">
+      <img src="https://source.unsplash.com/802x600/?hotel,room" alt="Deluxe Family Room">
+      <h2>Deluxe Family Room</h2>
+      <p>₹2900 inc taxes</p>
+      <p><img src="icons/wifi.svg"> WiFi <img src="icons/ac.svg"> AC</p>
+    </div>
+  </section>  <section class="check-availability full-screen">
+    <div class="card">
+      <h2>Check Availability</h2>
+      <form>
+        <input type="date" placeholder="Check-in Date">
+        <input type="date" placeholder="Check-out Date">
+        <select>
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+        </select>
+        <select>
+          <option>Standard Non-AC</option>
+          <option>Deluxe AC with Balcony</option>
+          <option>Deluxe Family Room</option>
+        </select>
+        <button class="btn">Search Rooms</button>
+      </form>
+    </div>
+  </section>  <footer>
+    <p>© SS Crown Inn, #490, OTC Road, Bengaluru - 560 053</p>
+    <p><a href="https://wa.me/916364309962">WhatsApp: +91 6364309962</a></p>
+    <p><a href="#about">About</a></p>
+  </footer>
+</body>
 </html>
