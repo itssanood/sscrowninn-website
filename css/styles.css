@@ -151,3 +151,16 @@ footer {
   color: white;
   position: relative;
 }
+.watermark {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+  letter-spacing: 5px;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+}
