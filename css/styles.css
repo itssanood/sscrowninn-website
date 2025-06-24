@@ -1,108 +1,114 @@
-* {
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body, html {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  background: #000;
+  height: 100%;
 }
-section {
+
+.section {
   height: 100vh;
-  scroll-snap-align: start;
-  padding: 2rem;
-  color: white;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-}
-.full-screen {
-  position: relative;
+  width: 100%;
   background-image: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-.hero .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-h1 {
-  font-size: 2.5rem;
-}
-.ratings img {
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 4px;
-}
-.ratings span {
-  margin: 0 10px;
-  display: inline-block;
-}
-.btn, .btn-outline {
-  display: inline-block;
-  margin: 1rem;
-  padding: 10px 20px;
-  background: white;
-  color: black;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-.btn-outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
-.reviews .review-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-.review-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-.room-cards {
+  backdrop-filter: blur(5px) brightness(0.5);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-.room-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  max-width: 90%;
-  text-align: center;
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-}
-.room-card img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-.footer {
-  padding: 2rem;
-  background: #111;
-  text-align: center;
-  color: #ccc;
+  justify-content: space-between;
+  scroll-snap-align: start;
 }
 
-@keyframes fadeInUp {
+.hero-content {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  text-align: center;
+  padding: 20px;
+}
+
+.review-sources span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+}
+
+.view-more {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-about {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.footer-about a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: translateY(40px);
     opacity: 0;
+    transform: translateY(15px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
