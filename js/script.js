@@ -16,3 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+// Add scroll animations, review sliders etc. here in future
+console.log("SS Crown Inn Website Loaded");
