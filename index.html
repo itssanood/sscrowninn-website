@@ -1,69 +1,94 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SS Crown Inn</title>
+  <title>SS Crown Inn - Welcome</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-  <script defer src="js/script.js"></script>
-</head>
-<body>
-  <div class="container">
-    <!-- Section 1: Hero -->
-    <section class="section hero" id="section1">
-      <div class="hero-content fade-in">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head><body>
+  <main class="scroll-container">
+    <!-- Hero Section -->
+    <section class="section fullscreen bg-overlay">
+      <div class="content">
         <h1>Welcome to SS Crown Inn</h1>
-        <p>Experience comfort in the heart of Bengaluru</p>
-        <div class="review-grid fade-in">
-          <div class="review-card">"Excellent service and hospitality." - ⭐⭐⭐⭐⭐</div>
-          <div class="review-card">"Clean rooms and great staff." - ⭐⭐⭐⭐⭐</div>
-          <div class="review-card">"Highly recommended for families." - ⭐⭐⭐⭐⭐</div>
-          <div class="review-card">"Top-notch amenities." - ⭐⭐⭐⭐⭐</div>
-          <div class="review-card">"Affordable and cozy." - ⭐⭐⭐⭐⭐</div>
-          <div class="review-card">"Great experience overall!" - ⭐⭐⭐⭐⭐</div>
+        <p class="tagline">Experience Comfort and Elegance</p>
+        <a href="#about" class="btn">About Us</a>
+        <div class="ratings">
+          <span><img src="images/google.png" alt="Google" /> 4.7</span>
+          <span><img src="images/facebook.png" alt="Facebook" /> 4.9</span>
+          <span><img src="images/tripadvisor.png" alt="Tripadvisor" /> 4.8</span>
+          <span><img src="images/booking.png" alt="Booking" /> 4.6</span>
+          <span><img src="images/makemytrip.png" alt="MakeMyTrip" /> 4.5</span>
         </div>
       </div>
-    </section><!-- Section 2: Rooms -->
-<section class="section rooms" id="section2">
-  <div class="room-card fade-in">
-    <img src="https://source.unsplash.com/800x500/?hotel,room" alt="Standard Room">
-    <h2>Standard Non-AC - ₹1568 (incl. GST)</h2>
+    </section><!-- Review Section -->
+<section class="section reviews fullscreen">
+  <h2>What Our Customers Say</h2>
+  <div class="review-grid">
+    <div class="card">
+      <p>"Excellent service and rooms!"</p>
+      <span>– Balachandar K (Google)</span>
+    </div>
+    <div class="card">
+      <p>"Convenient location and friendly staff."</p>
+      <span>– Bryan Choi (Google)</span>
+    </div>
+    <div class="card">
+      <p>"Loved the view from our balcony room."</p>
+      <span>– Tsu (Facebook)</span>
+    </div>
+    <div class="card">
+      <p>"Best hotel experience in Bangalore!"</p>
+      <span>– Mary (Tripadvisor)</span>
+    </div>
+    <div class="card">
+      <p>"Family rooms are spacious and clean."</p>
+      <span>– Kumar Achra (Booking)</span>
+    </div>
+    <div class="card">
+      <p>"Affordable yet luxurious stay."</p>
+      <span>– Smita (MakeMyTrip)</span>
+    </div>
   </div>
-  <div class="room-card fade-in">
-    <img src="https://source.unsplash.com/801x500/?hotel,room" alt="Deluxe Room">
-    <h2>Deluxe AC with Balcony - ₹1904 (incl. GST)</h2>
-  </div>
-  <div class="room-card fade-in">
-    <img src="https://source.unsplash.com/802x500/?hotel,room" alt="Family Room">
-    <h2>Deluxe Family Room - ₹2500 (incl. GST)</h2>
+  <a href="#" class="btn-outline">View More</a>
+</section>
+
+<!-- Rooms Section -->
+<section class="section fullscreen rooms">
+  <h2>Our Rooms</h2>
+  <div class="room-cards">
+    <div class="room-card">
+      <img src="images/room1.jpg" alt="Standard Room" />
+      <h3>Standard Non-AC</h3>
+      <p>₹1568 <span>incl. taxes</span></p>
+      <div class="icons">
+        <img src="icons/wifi.svg" alt="WiFi" />
+      </div>
+    </div>
+    <div class="room-card">
+      <img src="images/room2.jpg" alt="Deluxe Room" />
+      <h3>Deluxe AC Room & Balcony</h3>
+      <p>₹1804 <span>incl. taxes</span></p>
+      <div class="icons">
+        <img src="icons/wifi.svg" alt="WiFi" />
+        <img src="icons/ac.svg" alt="AC" />
+      </div>
+    </div>
+    <div class="room-card">
+      <img src="images/room3.jpg" alt="Family Room" />
+      <h3>Deluxe Family Room</h3>
+      <p>₹2900 <span>incl. taxes</span></p>
+      <div class="icons">
+        <img src="icons/wifi.svg" alt="WiFi" />
+        <img src="icons/ac.svg" alt="AC" />
+        <img src="icons/family.svg" alt="Family" />
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Section 3: Availability -->
-<section class="section availability" id="section3">
-  <h2 class="fade-in">Check Availability</h2>
-  <form class="fade-in">
-    <input type="date" required />
-    <input type="date" required />
-    <select>
-      <option value="Standard">Standard Non-AC</option>
-      <option value="Deluxe">Deluxe AC</option>
-      <option value="Family">Family Room</option>
-    </select>
-    <input type="number" placeholder="Number of Guests" min="1" required />
-    <button>Book Now</button>
-  </form>
-</section>
-
-<!-- Section 4: Footer -->
-<section class="section footer fade-in" id="section4">
-  <footer>
-    <p>© SS Crown Inn, #490, OTC Road, Bengaluru - 560 053</p>
-    <p><a href="https://wa.me/916364309962" style="color: gold;">+91 6364309962 (WhatsApp)</a></p>
-    <p><a href="#about" style="color: #aaa;">About</a></p>
-  </footer>
-</section>
-
-  </div>
-</body>
-</html>
+  </main>  <footer>
+    <p>SS Crown Inn, #490, OTC ROAD, BENGALURU - 560 053</p>
+    <p>WhatsApp: +91 6364309962</p>
+  </footer>  <script src="js/script.js"></script></body></html>
