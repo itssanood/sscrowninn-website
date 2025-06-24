@@ -1,2 +1,2 @@
 
-// JS scripts can be added here
+// JS scripts can go here
