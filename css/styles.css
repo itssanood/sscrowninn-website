@@ -4,49 +4,58 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
-section.fullscreen {
+.section {
   height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  position: relative;
-  color: #fff;
-  padding: 2rem;
 }
 
 .hero {
   background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat fixed;
   position: relative;
+  color: white;
 }
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   z-index: 0;
 }
-.hero-content, .review-grid {
-  position: relative;
+.hero-content {
   z-index: 1;
+  text-align: center;
 }
 .hero-content h1 {
-  font-size: 3rem;
   font-family: 'Playfair Display', serif;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -55,55 +64,63 @@ section.fullscreen {
   padding: 1rem;
   border-radius: 10px;
   backdrop-filter: blur(3px);
-}
-
-.rooms, .availability, footer {
-  padding: 4rem 2rem;
+  color: white;
 }
 
 .room-card {
-  margin: 2rem auto;
   background: #fff;
-  color: #000;
   border-radius: 12px;
-  overflow: hidden;
   max-width: 600px;
-  width: 100%;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 1rem auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 .room-card img {
   width: 100%;
-  height: auto;
   display: block;
 }
 .room-card h2 {
-  margin: 1rem;
-  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .availability form {
-  max-width: 500px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 400px;
+  width: 100%;
 }
 .availability input,
 .availability select,
 .availability button {
   padding: 0.75rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 .availability button {
   background: gold;
   color: black;
   font-weight: bold;
+  cursor: pointer;
 }
 
-footer {
+.footer {
   background: #111;
   color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
+}
+.footer a {
+  color: gold;
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
