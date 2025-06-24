@@ -1,1 +1,0 @@
-console.log('SS Crown Inn - Ready!');
