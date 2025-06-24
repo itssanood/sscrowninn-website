@@ -1,20 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const revealElements = document.querySelectorAll(".scroll-reveal");
+document.addEventListener('DOMContentLoaded', () => {
+  let current = 0;
+  const slides = document.querySelectorAll('.room-slide');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        observer.unobserve(entry.target);
-      }
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === index);
     });
-  }, {
-    threshold: 0.15
+  }
+
+  window.addEventListener('scroll', () => {
+    const trigger = window.scrollY / window.innerHeight;
+    const index = Math.floor(trigger - 1);
+    if (index !== current && index >= 0 && index < slides.length) {
+      current = index;
+      showSlide(index);
+    }
   });
 
-  revealElements.forEach(el => {
-    observer.observe(el);
-  });
+  showSlide(0);
 });
-// Add scroll animations, review sliders etc. here in future
-console.log("SS Crown Inn Website Loaded");
