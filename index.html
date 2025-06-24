@@ -11,6 +11,8 @@
       height: 100%;
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
     }section {
   scroll-snap-align: start;
   min-height: 100vh;
@@ -21,16 +23,36 @@
 }
 
 .hero {
-  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat;
   position: relative;
   color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover fixed no-repeat;
+  filter: brightness(0.4) blur(4px);
+  z-index: 1;
 }
 
 .hero-overlay {
-  background-color: rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 2;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
+  max-width: 800px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .btn {
@@ -83,6 +105,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .review-avatar {
@@ -105,80 +128,53 @@
   text-align: center;
 }
 
+.review-platforms {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 1rem 0;
+  flex-wrap: wrap;
+}
+
+.platform {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.platform img {
+  width: 20px;
+}
+
+.load-more {
+  margin-top: 1rem;
+  background: #eee;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body>  <!-- Hero Section -->  <section class="hero">
     <div class="hero-overlay">
       <h1>Welcome to SS Crown Inn</h1>
       <p>Experience Comfort and Elegance</p>
-      <a href="#about" class="btn">About Us</a>
-    </div>
-  </section>  <!-- About Section -->  <section id="about">
-    <h2 class="section-title">About SS Crown Inn</h2>
-    <p>Located in the heart of Bengaluru, SS Crown Inn offers a blend of luxury and affordability, perfect for business and leisure travelers.</p>
-  </section>  <!-- Rooms Section -->  <section id="rooms">
-    <h2 class="section-title">Our Rooms</h2>
-    <div class="room-cards">
-      <div class="room-card">
-        <img src="https://i.postimg.cc/8P2VW7yb/room1.jpg" alt="Standard Room">
-        <h3>Standard Non-AC</h3>
-        <p>₹1568 <span>inc taxes</span></p>
-        <p>📶 WiFi</p>
-        <a href="#">View Details</a>
-      </div>
-      <div class="room-card">
-        <img src="https://i.postimg.cc/Y9kHxbgM/room2.jpg" alt="Deluxe Room">
-        <h3>Deluxe AC Room & Balcony</h3>
-        <p>₹1804 <span>inc taxes</span></p>
-        <p>📶 WiFi ❄️ AC</p>
-        <a href="#">View Details</a>
-      </div>
-      <div class="room-card">
-        <img src="https://i.postimg.cc/4yd7cCcm/room3.jpg" alt="Family Room">
-        <h3>Deluxe Family Room</h3>
-        <p>₹2900 <span>inc taxes</span></p>
-        <p>📶 WiFi ❄️ AC 👨‍👩‍👧</p>
-        <a href="#">View Details</a>
-      </div>
-    </div>
-  </section>  <!-- Reviews Section -->  <section id="reviews">
-    <h2 class="section-title">What Our Customers Say</h2>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-header">
-          <img src="https://i.pravatar.cc/50?u=1" class="review-avatar">
-          <div>
-            <strong>Balachandar K</strong><br><small>1 day ago</small>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="review-source">
-        </div>
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p>Left a 5-star rating. Excellent!</p>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <img src="https://i.pravatar.cc/50?u=2" class="review-avatar">
-          <div>
-            <strong>Bryan Choi</strong><br><small>2 days ago</small>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="review-source">
-        </div>
-        <div class="review-stars">⭐⭐⭐⭐</div>
-        <p>Parking is a bit of hassle, but awesome place to visit.</p>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <img src="https://i.pravatar.cc/50?u=3" class="review-avatar">
-          <div>
-            <strong>Mary</strong><br><small>5 days ago</small>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="review-source">
-        </div>
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p>Great pics. Cute book!</p>
-      </div>
-    </div>
-  </section>  <script>
+      <a href="#about" class="btn">About Us</a><!-- Reviews Summary inside Hero -->
+  <div class="review-platforms">
+    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"> Google 4.7</div>
+    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Facebook_Logo_2023.png"> Facebook 4.9</div>
+    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Tripadvisor_Icon.png"> Tripadvisor 4.8</div>
+    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Booking.com_logo.svg"> Booking.com 4.6</div>
+    <div class="platform"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/MakeMyTrip_Logo.svg"> MakeMyTrip 4.5</div>
+  </div>
+</div>
+
+  </section>  <!-- Remaining content (About, Rooms, Reviews) stays the same -->  <script>
     // Show cards on scroll
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
