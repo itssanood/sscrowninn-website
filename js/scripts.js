@@ -1,12 +1,12 @@
-document.getElementById('bookingForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const { name, phone, roomType, checkin, checkout } = e.target;
-  const msg = document.getElementById('formMsg');
-  if (new Date(checkout.value) <= new Date(checkin.value)) {
-    msg.textContent = '⚠️ Check‑out date must be after check‑in.';
-    return;
-  }
-  msg.textContent = `Thanks ${name.value}! Your ${roomType.value} is booked from ${checkin.value} to ${checkout.value}. We'll call you at ${phone.value}.`;
-  e.target.reset();
-});
-console.log('Website fully loaded and ready.');
+// Simple booking form submission logic const form = document.getElementById("bookingForm"); const formMsg = document.getElementById("formMsg");
+
+form.addEventListener("submit", function (e) { e.preventDefault();
+
+const name = form.name.value.trim(); const phone = form.phone.value.trim(); const room = form.roomType.value; const checkin = form.checkin.value; const checkout = form.checkout.value;
+
+if (name.length < 3 || phone.length < 10 || !room || !checkin || !checkout) { formMsg.textContent = "Please fill all fields correctly."; formMsg.style.color = "#ff6b6b"; return; }
+
+const checkinDate = new Date(checkin); const checkoutDate = new Date(checkout); if (checkinDate >= checkoutDate) { formMsg.textContent = "Check-out must be after check-in."; formMsg.style.color = "#ff6b6b"; return; }
+
+// Simulate submission formMsg.textContent = "Booking confirmed! We will contact you shortly."; formMsg.style.color = "#e6b400"; form.reset(); });
+
