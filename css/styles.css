@@ -12,6 +12,44 @@ body {
 }
 
 /* Header */
+/* Hamburger Base */
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-links a {
+    padding: 0.75em 0;
+    display: block;
+    font-size: 1rem;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
 .navbar {
   position: fixed;
   top: 0;
