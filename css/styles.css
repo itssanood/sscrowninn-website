@@ -16,14 +16,59 @@ body { font-family:'Inter',sans-serif; color:#fff; background:#000; overflow-x:h
 .navbar { position:absolute; top:20px; left:20px; right:20px;
   display:flex; align-items:center; justify-content:space-between; z-index:2;
 }
-.navbar nav a { margin:0 1em; color:#fff; text-decoration:none; font-weight:600; transition:color .3s; }
-.navbar nav a:hover { color:#e6b400; }
-.logo { height:50px; }
-.hero-content { z-index:2; animation:fadeIn 2s ease; }
-.hero-content h1 { font-size:3rem; margin-bottom:.5em; }
-.hero-content p { font-size:1.25rem; margin-bottom:1em; }
-.btn-primary { padding:.75em 2em; background:#e6b400; color:#000; border:none; border-radius:30px;
-  font-weight:600; cursor:pointer; display:inline-block; transition:transform .3s;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left .logo {
+  height: 50px;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 1.5em;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #e6b400;
+}
+
+/* Responsive Header Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-right a {
+    padding: 10px 0;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
 }
 .btn-primary:hover { transform:scale(1.05); }
 
