@@ -51,23 +51,27 @@ body { font-family:'Inter',sans-serif; color:#fff; background:#000; overflow-x:h
   color: #e6b400;
 }
 /* Responsive Header Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .navbar-right {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 10px;
+    gap: 1em;
   }
 
-  .navbar-right a {
-    padding: 10px 0;
-    width: 100%;
-    border-top: 1px solid rgba(255,255,255,0.1);
+  .nav-links a {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 5px;
   }
 }
 .btn-primary:hover { transform:scale(1.05); }
