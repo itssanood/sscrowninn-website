@@ -1,3 +1,55 @@
+/* --- */
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    /* Header adjustments for tablets and smaller desktops */
+    .site-header {
+        padding: 15px 0; /* Slightly reduce header padding */
+    }
+    .logo a {
+        font-size: 1.8em; /* Slightly smaller logo on tablets */
+    }
+    .main-nav ul li {
+        margin: 5px 12px; /* Reduce spacing between nav items when wrapped */
+    }
+    .main-nav .btn {
+        padding: 8px 18px; /* Smaller button in nav for smaller screens */
+        font-size: 0.8em;
+    }
+    /* Ensure the header still looks good when scrolled on smaller screens */
+    .site-header.scrolled {
+        padding: 10px 0; /* Even less padding when scrolled */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header adjustments for mobile phones */
+    .site-header {
+        padding: 10px 0; /* Even smaller padding on very small screens */
+    }
+    .logo a {
+        font-size: 1.5em; /* Smaller logo for phones */
+    }
+    .main-nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center stacked items */
+        margin-top: 10px; /* Space between logo and stacked nav */
+    }
+    .main-nav ul li {
+        margin: 8px 0; /* More vertical space between stacked items */
+    }
+    .main-nav .btn {
+        display: block; /* Make the button take full available width if needed, or better, center it */
+        width: fit-content; /* Adjust width to content */
+        margin: 15px auto 0 auto; /* Center button below stacked nav items */
+        font-size: 0.85em; /* Ensure readability */
+        padding: 10px 20px;
+    }
+    .site-header.scrolled {
+        padding: 8px 0; /* Minimal padding when scrolled on mobile */
+    }
+}
+
 /* General Resets & Base Styles */
 * {
     margin: 0;
