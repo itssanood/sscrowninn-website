@@ -5,49 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SS Crown Inn</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script src="js/scripts.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-  <section class="hero">
+  <!-- Section 1: Welcome -->
+  <div class="section section-1">
     <div class="overlay"></div>
     <div class="content">
-      <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" class="logo" />
-      <h1>Welcome to SS Crown Inn</h1>
-      <p>Comfort • Elegance • Affordability</p>
+      <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" class="logo" />
+      <h1 data-aos="fade-up">Welcome to SS Crown Inn</h1>
+      <p data-aos="fade-up" data-aos-delay="300">Comfort & Luxury in the Heart of Bengaluru</p>
+      <a href="#rooms" class="scroll-down">Scroll Down ↓</a>
     </div>
-  </section>
+  </div>
 
-  <section class="reviews">
-    <div class="review-icons">
-      <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" />
-      <img src="https://img.icons8.com/color/48/booking.png" alt="Booking" />
-      <img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook" />
-      <img src="https://img.icons8.com/color/48/tripadvisor.png" alt="TripAdvisor" />
+  <!-- Section 2: Rooms -->
+  <div class="section section-2" id="rooms">
+    <div class="content" data-aos="fade-up">
+      <h2>Our Rooms</h2>
+      <div class="room-cards">
+        <div class="room-card">
+          <img src="https://i.postimg.cc/fLsNbWyc/room1.jpg" />
+          <h3>Standard Non-AC</h3>
+          <p>₹1400 + 12% GST</p>
+        </div>
+        <div class="room-card">
+          <img src="https://i.postimg.cc/BbKQjcMf/room2.jpg" />
+          <h3>Deluxe AC with Balcony</h3>
+          <p>₹1700 + 12% GST</p>
+        </div>
+        <div class="room-card">
+          <img src="https://i.postimg.cc/3rTTWqGg/room3.jpg" />
+          <h3>Deluxe Family Room</h3>
+          <p>₹2500 + 12% GST</p>
+        </div>
+      </div>
     </div>
-    <div class="review-cards">
-      <div class="card">“Excellent location and hospitality!” – Balachandar K</div>
-      <div class="card">“Very neat and budget friendly.” – Mary T</div>
-      <div class="card">“Will definitely visit again.” – Bryan C</div>
+  </div>
+
+  <!-- Section 3: Facilities -->
+  <div class="section section-3">
+    <div class="content" data-aos="fade-up">
+      <h2>Facilities</h2>
+      <ul class="facilities">
+        <li>🛏️ AC & Non-AC Rooms</li>
+        <li>📶 High-Speed Wi-Fi</li>
+        <li>🕐 24/7 Room Service</li>
+        <li>🧼 Cleanliness & Hygiene</li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <section class="rooms">
-    <h1>Our Rooms</h1>
-    <div class="room-card">Standard Non-AC Room – ₹1400 + 12% GST</div>
-    <div class="room-card">Deluxe AC with Balcony – ₹1700 + 12% GST</div>
-    <div class="room-card">Deluxe Family Room – ₹2500 + 12% GST</div>
-  </section>
+  <!-- Section 4: Location -->
+  <div class="section section-4">
+    <div class="content" data-aos="fade-up">
+      <h2>Find Us</h2>
+      <p>#490, OTC ROAD, BENGALURU - 560 053</p>
+      <iframe src="https://www.google.com/maps?q=12.9716,77.5946&hl=en&z=14&amp;output=embed" width="300" height="200" style="border:0;"></iframe>
+    </div>
+  </div>
 
-  <section class="map">
-    <h2>Find Us</h2>
-    <p>#490, OTC ROAD, BENGALURU - 560 053</p>
-    <iframe src="https://www.google.com/maps?q=12.9716,77.5946&hl=en&z=14&amp;output=embed" width="100%" height="250" style="border:0;"></iframe>
-  </section>
-
+  <!-- Footer -->
   <footer class="footer">
-    <div>📞 +91 6364309962</div>
-    <div>SS Crown Inn</div>
-    <div>📍 Bengaluru</div>
+    <p>📞 +91 6364309962 &nbsp;&nbsp;&nbsp; <strong>SS Crown Inn</strong> &nbsp;&nbsp;&nbsp; 📍 Bengaluru</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
