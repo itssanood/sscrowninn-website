@@ -28,3 +28,11 @@ form.addEventListener("submit", function (e) {
   formMsg.style.color = "#e6b400";
   form.reset();
 });
+
+// Mobile Menu Toggle
+const toggleBtn = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
