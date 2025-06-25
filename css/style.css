@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e0e;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
+}
+
+h2, h3 {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.room-text, .booking-form, .footer-text {
+  animation: fadeInUp 1s ease both;
+  animation-delay: 0.2s;
+}
+
+.site-btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.site-btn:hover {
+  background: #e6b800;
+  transform: translateY(-2px);
+}
+
+.room-item {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.room-item:hover {
+  transform: scale(1.03);
+}
+
+input, select {
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+.footer-section {
+  background: #111;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
