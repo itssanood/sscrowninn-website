@@ -3,137 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS Crown Inn - Your Luxurious Urban Escape in Bangalore</title>
+    <title>SS Crown Inn - Modern Luxury in Bangalore</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="site-header">
         <div class="container">
             <div class="logo">
-                <h1>SS Crown Inn</h1>
+                <a href="#hero">SS Crown Inn</a>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
                     <li><a href="#rooms">Rooms</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#attractions">Local Attractions</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#booking-section" class="button nav-button">Book Now</a></li>
+                    <li><a href="#attractions">Explore</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#booking-section" class="btn btn-primary">Book Now</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section id="hero" class="hero-section">
+        <img src="path/to/modern-hero-image.jpg" alt="Luxurious modern hotel interior" class="hero-bg-image">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Experience Unparalleled Comfort at SS Crown Inn</h1>
-            <p>Your Luxurious Urban Escape Awaits in the Heart of Bangalore.</p>
-            <a href="#booking-section" class="button primary-button">Book Your Stay Now</a>
+            <h1 class="fade-in-up">Your Modern Oasis in Bangalore.</h1>
+            <p class="fade-in-up delay-1">Experience contemporary luxury at SS Crown Inn.</p>
+            <a href="#booking-section" class="btn btn-primary fade-in-up delay-2">Discover & Book</a>
         </div>
-        <div class="hero-image-overlay"></div>
-        <img src="path/to/hero-background-image.jpg" alt="Luxurious hotel lobby or exterior" class="hero-background-image">
     </section>
 
-    <section id="about" class="about-section container">
-        <h2>Welcome to SS Crown Inn</h2>
-        <p>SS Crown Inn offers the perfect blend of luxury and convenience. Located in the heart of Bangalore, our hotel provides easy access to the city's top attractions. Enjoy our stylish rooms, on-site dining, and exceptional hospitality.</p>
-        <p>Whether you're visiting for business or leisure, our dedicated team is here to ensure your stay is memorable and comfortable.</p>
+    <section id="about" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Welcome to SS Crown Inn</h2>
+            <p class="section-description">SS Crown Inn embodies modern elegance, offering a seamless blend of luxury, technology, and exceptional service. Located in Bangalore's vibrant heart, we provide an unparalleled experience for every traveler.</p>
+        </div>
     </section>
 
-    <section id="rooms" class="rooms-section container">
-        <h2>Our Luxurious Rooms</h2>
-
-        <div class="room-section deluxe-ac">
-            <img src="path/to/deluxe-ac-room-image.jpg" alt="Deluxe AC Room at SS Crown Inn">
-            <div class="room-details">
-                <h3>Deluxe AC Room</h3>
-                <p>Our Deluxe AC Rooms offer a spacious and comfortable retreat. Each room is elegantly furnished and equipped with modern amenities to ensure a relaxing stay.</p>
-                <a href="#booking-section" class="button">Book Now</a>
+    <section id="rooms" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Modern Accommodations</h2>
+            <div class="room-grid">
+                <div class="room-card fade-in">
+                    <img src="path/to/deluxe-ac-room-image.jpg" alt="Deluxe AC Room">
+                    <div class="card-content">
+                        <h3>Deluxe AC Room</h3>
+                        <p>A spacious and sophisticated retreat with cutting-edge amenities for ultimate comfort.</p>
+                        <a href="#booking-section" class="btn btn-secondary">View & Book</a>
+                    </div>
+                </div>
+                <div class="room-card fade-in delay-1">
+                    <img src="path/to/standard-non-ac-room-image.jpg" alt="Standard Non-AC Room">
+                    <div class="card-content">
+                        <h3>Standard Non-AC Room</h3>
+                        <p>Comfortable and stylish, offering essential modern conveniences for a pleasant stay.</p>
+                        <a href="#booking-section" class="btn btn-secondary">View & Book</a>
+                    </div>
+                </div>
+                <div class="room-card fade-in delay-2">
+                    <img src="path/to/family-suite-room-image.jpg" alt="Family Suite Room">
+                    <div class="card-content">
+                        <h3>Family Suite</h3>
+                        <p>Expansive and elegantly designed, perfect for families seeking space and modern luxury.</p>
+                        <a href="#booking-section" class="btn btn-secondary">View & Book</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="room-section standard-non-ac reverse">
-            <div class="room-details">
-                <h3>Standard Non-AC Room</h3>
-                <p>Our Standard Non-AC Rooms provide a comfortable and affordable option for budget-conscious travelers. Each room is clean, well-maintained, and equipped with essential amenities for a pleasant stay.</p>
-                <a href="#booking-section" class="button">Book Now</a>
+    <section id="gallery" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">A Glimpse of Our Modernity</h2>
+            <div class="gallery-grid">
+                <img src="path/to/gallery-img1.jpg" alt="Hotel Interior 1" class="fade-in">
+                <img src="path/to/gallery-img2.jpg" alt="Hotel Interior 2" class="fade-in delay-1">
+                <img src="path/to/gallery-img3.jpg" alt="Hotel Interior 3" class="fade-in delay-2">
+                <img src="path/to/gallery-img4.jpg" alt="Hotel Exterior" class="fade-in delay-3">
+                </div>
+        </div>
+    </section>
+
+    <section id="attractions" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Explore Modern Bangalore</h2>
+            <div class="attraction-list">
+                <div class="attraction-item fade-in">
+                    <h3>Cubbon Park</h3>
+                    <p>A sprawling green oasis perfect for a refreshing break in the city's heart.</p>
+                </div>
+                <div class="attraction-item fade-in delay-1">
+                    <h3>Phoenix Marketcity</h3>
+                    <p>Experience premier shopping, dining, and entertainment in a vibrant setting.</p>
+                </div>
+                <div class="attraction-item fade-in delay-2">
+                    <h3>Indiranagar</h3>
+                    <p>Discover Bangalore's trendiest neighborhood with chic cafes and boutiques.</p>
+                </div>
             </div>
-            <img src="path/to/standard-non-ac-room-image.jpg" alt="Standard Non-AC Room at SS Crown Inn">
         </div>
+    </section>
 
-        <div class="room-section family-suite">
-            <img src="path/to/family-suite-room-image.jpg" alt="Family Suite Room at SS Crown Inn">
-            <div class="room-details">
-                <h3>Family Suite</h3>
-                <p>Our Family Suites are perfect for larger groups or families traveling together. These spacious suites feature multiple beds and ample living space, ensuring a comfortable and enjoyable stay for everyone.</p>
-                <a href="#booking-section" class="button">Book Now</a>
+    <section id="booking-section" class="section-padding bg-dark text-center">
+        <div class="container">
+            <h2 class="section-title text-white">Secure Your Stay</h2>
+            <p class="section-description text-white">Utilize our streamlined booking system for instant reservations. We offer secure UPI payments for your convenience.</p>
+            <div class="booking-placeholder">
+                <p>[ **Modern Booking Form / Integration Here** ]</p>
+                <p>This section will house the actual booking widget from your chosen reservation system or custom development for UPI integration.</p>
             </div>
+            <a href="#contact" class="btn btn-secondary mt-30">Need Assistance? Contact Us</a>
         </div>
-
     </section>
 
-    <section id="gallery" class="gallery-section container">
-        <h2>Gallery</h2>
-        <p>Discover the beauty and elegance of SS Crown Inn through our captivating photo gallery. From our inviting lobby to our comfortable rooms and amenities, see what awaits you.</p>
-        <div class="gallery-grid">
-            <img src="path/to/gallery-img1.jpg" alt="Hotel View 1">
-            <img src="path/to/gallery-img2.jpg" alt="Hotel View 2">
-            <img src="path/to/gallery-img3.jpg" alt="Hotel View 3">
-            <img src="path/to/gallery-img4.jpg" alt="Hotel View 4">
+    <section id="contact" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> [Your Hotel Address Here], Bangalore, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@sscrowninn.com">info@sscrowninn.com</a></p>
             </div>
-    </section>
-
-    <section id="attractions" class="attractions-section container">
-        <h2>Explore Bangalore</h2>
-        <p>SS Crown Inn is ideally located to explore the vibrant city of Bangalore. Here are some nearby attractions:</p>
-        <ul>
-            <li><strong>Lal Bagh Botanical Garden:</strong> A beautifully landscaped garden perfect for a stroll.</li>
-            <li><strong>Cubbon Park:</strong> A large green space in the heart of the city, ideal for relaxation.</li>
-            <li><strong>Bangalore Palace:</strong> A historical palace reflecting Tudor and Scottish Gothic architecture.</li>
-            <li><strong>UB City:</strong> A luxury mall for high-end shopping and dining.</li>
-            <li><strong>MG Road:</strong> A popular commercial hub with shops, restaurants, and entertainment.</li>
-        </ul>
-        <p>Our concierge can assist you with local tours and transportation.</p>
-    </section>
-
-    <section id="booking-section" class="booking-section container">
-        <h2>Book Your Stay</h2>
-        <p>Ready to experience the luxury and comfort of SS Crown Inn? Use our advanced booking system to check availability and reserve your room instantly. We accept UPI for convenient payments.</p>
-        <div class="booking-form-placeholder">
-            <p>[  **Placeholder for your Booking Form / API Integration** ]</p>
-            <p>Example fields could include: Check-in Date, Check-out Date, Number of Guests, Room Type, Contact Info.</p>
-            <p>Once you choose a booking platform, you'll embed its code here.</p>
-            <p>For UPI payments, you'd integrate a UPI gateway here (requires developer knowledge).</p>
-        </div>
-        <p>For any assistance, please <a href="#contact">contact us</a> directly.</p>
-    </section>
-
-    <section id="contact" class="contact-section container">
-        <h2>Contact Us</h2>
-        <p>Have questions or need assistance? Don't hesitate to reach out to us.</p>
-        <div class="contact-info">
-            <p><strong>Address:</strong> [Your Hotel Address Here], Bangalore, India</p>
-            <p><strong>Phone:</strong> <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@sscrowninn.com">info@sscrowninn.com</a></p>
-        </div>
-        <div class="contact-form">
-            <h3>Send Us a Message</h3>
-            <form>
+            <form class="contact-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Your Phone (Optional)">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="button">Send Message</button>
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer class="site-footer bg-dark text-white">
         <div class="container">
             <p>&copy; 2025 SS Crown Inn. All rights reserved.</p>
             <div class="footer-links">
