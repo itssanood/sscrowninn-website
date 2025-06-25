@@ -1,197 +1,69 @@
-/* Reset and Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background: #0d0d0d;
-  color: #fff;
-  line-height: 1.6;
-}
-
-/* Header */
-/* Hamburger Base */
-.nav-toggle {
-  display: none;
-  font-size: 28px;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   color: white;
-  cursor: pointer;
+  background-color: #111;
 }
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 1em 0;
-    border-top: 1px solid #222;
-  }
-
-  .nav-links a {
-    padding: 0.75em 0;
-    display: block;
-    font-size: 1rem;
-    border-bottom: 1px solid #222;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 12px 24px;
-  background: #0d0d0d;
-  border-bottom: 1px solid #1a1a1a;
+section {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.2em;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 6px 12px;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #e6b400;
-}
-
-/* Responsive Header (Mobile) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-links {
-    gap: 0.8em;
-  }
-
-  .nav-links a {
-    font-size: 0.95rem;
-    padding: 4px 8px;
-  }
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('https://i.postimg.cc/9QwdWPXj/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat;
-  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 2rem;
 }
-.hero-overlay {
+.hero {
+  background: url('https://i.postimg.cc/Vsx6qDC7/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') no-repeat center center/cover;
+  position: relative;
+}
+.hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
 }
-.hero-content {
+.hero .content {
   position: relative;
   z-index: 2;
 }
-.hero-content h1 {
-  font-size: 3rem;
-  color: #fff;
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
 }
-.hero-content p {
-  font-size: 1.5rem;
-  color: #ccc;
-  margin-bottom: 1em;
+.review-icons img {
+  width: 48px;
+  margin: 0 10px;
 }
-.btn-primary {
-  padding: 0.75em 2em;
-  background: #e6b400;
-  color: #000;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.btn-primary:hover {
-  background: #d4a600;
-}
-body {
-  padding-top: 70px; /* offset fixed header */
-}
-/* Booking */
-.booking {
-  padding: 4em 2em;
-  background: #111;
-  text-align: center;
-}
-#bookingForm {
-  max-width: 400px;
-  margin: auto;
+.review-cards {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
+  margin-top: 1rem;
 }
-#bookingForm input,
-#bookingForm select {
-  padding: 0.75em;
-  border: none;
-  border-radius: 8px;
+.card {
   background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.rooms .room-card {
+  background: #222;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+}
+.map iframe {
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background: #000;
   color: #fff;
-}
-#bookingForm input::placeholder {
-  color: #aaa;
-}
-.form-message {
-  margin-top: 1em;
-  color: #e6b400;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav-links {
-    flex-direction: column;
-    margin-top: 0.5em;
-    gap: 1em;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1.1rem;
-  }
 }
