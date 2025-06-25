@@ -1,21 +1,18 @@
-/* Reset & font */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter',sans-serif; color:#fff; background:#000; overflow-x:hidden; }
+/* Base Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Hero */
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('https://i.postimg.cc/9QwdWPXj/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
 }
-.hero-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(10px); }
-.navbar { position:absolute; top:20px; left:20px; right:20px;
-  display:flex; align-items:center; justify-content:space-between; z-index:2;
-}
+
+/* Header */
 .navbar {
   position: fixed;
   top: 0;
@@ -50,8 +47,199 @@ body { font-family:'Inter',sans-serif; color:#fff; background:#000; overflow-x:h
 .nav-links a:hover {
   color: #e6b400;
 }
-/* Responsive Header Adjustments */
-@media (max-width: 600px) {
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://i.postimg.cc/9QwdWPXj/a1bdb582-6a0c-4b85-a13d-79fcf35e52ae.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.hero-content {
+  z-index: 2;
+  animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+.btn-primary {
+  padding: 0.75em 2em;
+  background: #e6b400;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2em 0;
+}
+
+/* Rooms */
+.room-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+  padding: 0 20px 4em;
+}
+
+.room-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+}
+
+.room-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room-card h3 {
+  margin: 1em;
+  font-size: 1.5rem;
+}
+
+.room-card p {
+  margin: 0 1em 0.5em;
+  font-size: 1.2rem;
+  color: #e6b400;
+}
+
+.room-card ul {
+  list-style: disc inside;
+  margin: 0 1em 1em;
+}
+
+/* Booking */
+.booking {
+  padding: 2em 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#bookingForm {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm button {
+  padding: 0.75em 1em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#bookingForm input,
+#bookingForm select {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 1em;
+  color: #e6b400;
+  font-weight: 600;
+}
+
+/* Reviews */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2em;
+  padding: 0 20px 4em;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5em;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.review-card p {
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+.review-card h4 {
+  text-align: right;
+  font-size: 1rem;
+  color: #e6b400;
+}
+
+/* Contact */
+.contact {
+  padding: 2em 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.contact a {
+  color: #e6b400;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 1em;
+  background: #25D366;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 30px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -74,128 +262,13 @@ body { font-family:'Inter',sans-serif; color:#fff; background:#000; overflow-x:h
     margin-bottom: 5px;
   }
 }
-.btn-primary:hover { transform:scale(1.05); }
 
-/* Section Titles */
-h2 { text-align:center; font-size:2rem; margin:2em 0; position:relative;
-  animation:fadeInUp .8s ease;
-}
-h2::after { content:''; width:60px; height:4px; background:#e6b400; display:block; margin:8px auto; }
-
-/* Rooms */
-.rooms .room-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:2em; padding:0 20px 4em;
-}
-.room-card { background:rgba(255,255,255,0.05); border-radius:12px; overflow:hidden;
-  backdrop-filter:blur(5px); transition:transform .3s; }
-.room-card:hover { transform:translateY(-10px); }
-.room-card img { width:100%; height:180px; object-fit:cover; }
-.room-card h3 { margin:1em; font-size:1.5rem; }
-.room-card p { margin:0 1em .5em; font-size:1.2rem; color:#e6b400; }
-.room-card ul { list-style:disc inside; margin:0 1em 1em; }
-
-/* Booking Form */
-.booking { padding:2em 20px; background:rgba(0,0,0,0.8); }
-#bookingForm { max-width:400px; margin:0 auto; display:flex; flex-direction:column; gap:1em; }
-#bookingForm input, #bookingForm select, #bookingForm button {
-  padding:.75em 1em; border:none; border-radius:8px; font-size:1rem;
-}
-#bookingForm input, #bookingForm select { background:rgba(255,255,255,0.1); color:#fff; }
-.form-message { text-align:center; margin-top:1em; color:#e6b400; font-weight:600; }
-
-/* Reviews */
-.reviews .review-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:2em; padding:0 20px 4em;
-}
-.review-card { background:rgba(255,255,255,0.05); padding:1.5em; border-radius:10px;
-  backdrop-filter:blur(5px); animation:fadeInUp .8s ease; }
-.review-card p { margin-bottom:1em; line-height:1.4; }
-.review-card h4 { text-align:right; font-size:1rem; color:#e6b400; }
-
-/* Contact */
-.contact { padding:2em 20px; text-align:center; background:rgba(0,0,0,0.8); }
-.contact a { color:#e6b400; text-decoration:none; font-weight:600; }
-.btn-whatsapp { display:inline-block; margin-top:1em; background:#25D366; color:#fff;
-  padding:.6em 1.2em; border-radius:30px; }
-
-/* Footer */
-footer { text-align:center; padding:1em; background:rgba(0,0,0,0.9); font-size:.9rem; }
-
-/* Animations */
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeInUp { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } }
-/* ========== Responsive Styling ========== */
-
-@media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .room-container, .review-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-
-  .navbar nav a {
-    margin: 0 0.5em;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .navbar nav a {
-    padding: 0.5em 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    width: 100%;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .btn-primary {
-    font-size: 0.9rem;
-    padding: 0.6em 1.5em;
-  }
-
-  #bookingForm {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .room-card ul {
-    font-size: 0.9rem;
-  }
-
-  .review-card p {
-    font-size: 0.9rem;
-  }
-
-  .logo {
-    height: 40px;
-  }
-
-  .btn-primary {
-    font-size: 0.85rem;
+  to {
+    opacity: 1;
   }
 }
