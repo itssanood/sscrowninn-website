@@ -1,67 +1,58 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SS CROWN INN</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" />
-</head>
-<body>
-  <header class="header-section">
-    <div class="container">
-      <a href="#" class="site-logo">
-        <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" />
-      </a>
-      <nav class="main-menu">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#rooms">Rooms</a></li>
-          <li><a href="#booking">Booking</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>  <section class="hero-section" id="hero">
-    <div class="hero-content">
-      <h1>SS CROWN INN</h1>
-      <p>Affordable Comfort with Royal Experience</p>
-      <a href="#booking" class="site-btn">Book Now</a>
-    </div>
-  </section>  <section class="rooms-section" id="rooms">
-    <div class="section-container">
-      <h2>Our Rooms</h2>
-      <div class="room-list">
-        <div class="room-item">
-          <img src="https://i.postimg.cc/nLGFYymS/room1.jpg" alt="Standard Room" />
-          <div class="room-text">
-            <h3>Standard Non-AC</h3>
-            <p>₹1400 / Night</p>
-          </div>
-        </div>
-        <div class="room-item">
-          <img src="https://i.postimg.cc/8z44qkPP/room2.jpg" alt="Deluxe Room" />
-          <div class="room-text">
-            <h3>Deluxe AC with Balcony</h3>
-            <p>₹1700 / Night</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>  <section class="booking-section" id="booking">
-    <div class="section-container">
-      <h2>Book Your Stay</h2>
-      <form class="booking-form">
-        <input type="date" placeholder="Check In" required />
-        <input type="date" placeholder="Check Out" required />
-        <select required><option value="">Select Adults</option><option>1 Adult</option><option>2 Adults</option></select>
-        <select required><option value="">Select Children</option><option>0 Children</option><option>1 Child</option></select>
-        <button type="submit">Check Availability</button>
-      </form>
-    </div>
-  </section>  <footer class="footer-section" id="contact">
-    <div class="section-container">
-      <p>Contact us at +91-XXXXXXXXXX | info@sscrowninn.com</p>
-      <p>&copy; 2025 SS CROWN INN. All rights reserved.</p>
-    </div>
-  </footer>  <script src="js/main.js"></script></body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body { margin: 0; font-family: 'Poppins', sans-serif; background: #0e0e0e; color: #fff; scroll-behavior: smooth; line-height: 1.6; }
+
+.header-section { background: #111; padding: 20px 0; text-align: center; }
+
+.container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+
+.main-menu ul { list-style: none; display: flex; gap: 25px; padding: 0; margin: 0; }
+
+.main-menu ul li a { color: #fff; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+
+.main-menu ul li a:hover { color: #ffcc00; }
+
+.hero-section { height: 100vh; background: url('https://i.postimg.cc/SNj38RmM/hero-bg.jpg') no-repeat center center/cover; display: flex; align-items: center; justify-content: center; text-align: center; animation: fadeIn 2s ease-in-out; padding: 0 20px; }
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
+
+.hero-content p { font-size: 1.25rem; }
+
+.site-btn { display: inline-block; margin-top: 20px; padding: 12px 30px; background: #ffcc00; color: #000; font-weight: bold; border-radius: 30px; text-decoration: none; transition: transform 0.3s ease, background 0.3s ease; }
+
+.site-btn:hover { background: #e6b800; transform: scale(1.05); }
+
+.section-container { width: 90%; max-width: 1200px; margin: auto; padding: 60px 0; text-align: center; }
+
+.rooms-section h2, .booking-section h2 { font-size: 2.5rem; margin-bottom: 40px; }
+
+.room-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+
+.room-item { background: rgba(255, 255, 255, 0.05); border-radius: 15px; overflow: hidden; width: 320px; transition: transform 0.3s ease; }
+
+.room-item:hover { transform: scale(1.05); }
+
+.room-item img { width: 100%; height: 220px; object-fit: cover; }
+
+.room-text { padding: 20px; }
+
+.booking-form { display: grid; gap: 20px; max-width: 500px; margin: auto; padding: 30px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; }
+
+.booking-form input, .booking-form select { padding: 12px; background: #222; border: none; color: #fff; font-size: 16px; border-radius: 5px; }
+
+.booking-form button { background: #ffcc00; color: #000; padding: 12px; border: none; border-radius: 5px; font-weight: bold; font-size: 16px; cursor: pointer; transition: background 0.3s ease; }
+
+.booking-form button:hover { background: #e6b800; }
+
+.footer-section { background: #111; padding: 30px 20px; font-size: 0.9rem; text-align: center; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) { .main-menu ul { flex-direction: column; gap: 15px; }
+
+.room-item { width: 90%; }
+
+.hero-content h1 { font-size: 2.2rem; }
+
+.hero-content p { font-size: 1rem; } }
+
