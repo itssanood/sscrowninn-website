@@ -4,6 +4,111 @@
   <title>SS CROWN INN</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" type="image/png">
+  <style>
+    body {
+      background: #0e0e0e;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }.header-section, .footer-section, .booking-section, .rooms-section, .hero-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.header-section {
+  background-color: #111;
+  border-bottom: 1px solid #333;
+}
+
+.main-menu ul li a {
+  color: #f0f0f0;
+}
+
+.main-menu ul li a:hover {
+  color: #ffcc00;
+}
+
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.site-btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.site-btn:hover {
+  background: #e6b800;
+}
+
+.room-item, .booking-form {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.room-text h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.room-text h3 {
+  color: #ffcc00;
+  font-size: 22px;
+}
+
+.footer-text {
+  background: #111;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+select, input[type="date"] {
+  background: #222;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: #ffcc00;
+  border: none;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+  </style>
 </head><body>
   <!-- Header -->
   <header class="header-section">
