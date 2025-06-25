@@ -20,36 +20,36 @@ body { font-family:'Inter',sans-serif; color:#fff; background:#000; overflow-x:h
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  z-index: 999;
   padding: 10px 20px;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar-left .logo {
+.logo {
   height: 50px;
 }
 
-.navbar-right {
+.nav-links {
   display: flex;
   gap: 1.5em;
 }
 
-.navbar-right a {
-  color: #fff;
+.nav-links a {
+  color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
 
-.navbar-right a:hover {
+.nav-links a:hover {
   color: #e6b400;
 }
-
 /* Responsive Header Adjustments */
 @media (max-width: 768px) {
   .navbar {
