@@ -107,7 +107,9 @@ body {
 .btn-primary:hover {
   background: #d4a600;
 }
-
+body {
+  padding-top: 70px; /* offset fixed header */
+}
 /* Booking */
 .booking {
   padding: 4em 2em;
