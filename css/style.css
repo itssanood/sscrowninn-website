@@ -1,136 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0e0e0e;
-  color: #fff;
-  scroll-behavior: smooth;
-}
-
-header {
-  background: #111;
-  padding: 20px;
-  text-align: center;
-}
-
-.main-menu ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.main-menu ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.hero-section {
-  height: 100vh;
-  background: url('https://i.postimg.cc/SNj38RmM/hero-bg.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.hero-content h2 {
-  font-size: 48px;
-  margin: 0;
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.site-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  margin-top: 20px;
-  background: #ffcc00;
-  color: #000;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.site-btn:hover {
-  background: #e6b800;
-  transform: scale(1.05);
-}
-
-.rooms-section, .booking-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.room-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.room-item {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s ease;
-}
-
-.room-item:hover {
-  transform: scale(1.05);
-}
-
-.room-item img {
-  width: 100%;
-  display: block;
-}
-
-.booking-form {
-  max-width: 500px;
-  margin: auto;
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 15px;
-}
-
-.booking-form input,
-.booking-form select {
-  padding: 10px;
-  background: #222;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-}
-
-.booking-form button {
-  background: #ffcc00;
-  color: #000;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  background: #111;
-  padding: 20px;
-  font-size: 14px;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SS CROWN INN</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" />
+</head>
+<body>
+  <header class="header-section">
+    <div class="container">
+      <a href="#" class="site-logo">
+        <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" />
+      </a>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <h1>SS CROWN INN</h1>
+      <p>Affordable Comfort with Royal Experience</p>
+      <a href="#booking" class="site-btn">Book Now</a>
+    </div>
+  </section>  <section class="rooms-section" id="rooms">
+    <div class="section-container">
+      <h2>Our Rooms</h2>
+      <div class="room-list">
+        <div class="room-item">
+          <img src="https://i.postimg.cc/nLGFYymS/room1.jpg" alt="Standard Room" />
+          <div class="room-text">
+            <h3>Standard Non-AC</h3>
+            <p>₹1400 / Night</p>
+          </div>
+        </div>
+        <div class="room-item">
+          <img src="https://i.postimg.cc/8z44qkPP/room2.jpg" alt="Deluxe Room" />
+          <div class="room-text">
+            <h3>Deluxe AC with Balcony</h3>
+            <p>₹1700 / Night</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="booking-section" id="booking">
+    <div class="section-container">
+      <h2>Book Your Stay</h2>
+      <form class="booking-form">
+        <input type="date" placeholder="Check In" required />
+        <input type="date" placeholder="Check Out" required />
+        <select required><option value="">Select Adults</option><option>1 Adult</option><option>2 Adults</option></select>
+        <select required><option value="">Select Children</option><option>0 Children</option><option>1 Child</option></select>
+        <button type="submit">Check Availability</button>
+      </form>
+    </div>
+  </section>  <footer class="footer-section" id="contact">
+    <div class="section-container">
+      <p>Contact us at +91-XXXXXXXXXX | info@sscrowninn.com</p>
+      <p>&copy; 2025 SS CROWN INN. All rights reserved.</p>
+    </div>
+  </footer>  <script src="js/main.js"></script></body>
+</html>
