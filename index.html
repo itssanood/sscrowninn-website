@@ -1,88 +1,52 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SS CROWN INN</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>  <!-- Header -->  <header class="navbar">
-    <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" class="logo" />
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <img src="https://i.postimg.cc/zf73QW6R/file-00000000e37c6246a72156057436b6fb.png" alt="SS CROWN INN Logo" class="logo" />
     <nav class="nav-links">
       <a href="#rooms">Rooms</a>
       <a href="#booking">Booking</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>  <!-- Hero Section -->  <section class="hero" id="home">
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>SS CROWN INN</h1>
-      <p>Luxury & Comfort in the Heart of the City</p>
+      <h1>Welcome to SS CROWN INN</h1>
+      <p>Experience comfort and luxury at unbeatable prices</p>
       <a href="#booking" class="btn-primary">Book Now</a>
     </div>
-  </section>  <!-- Rooms Section -->  <section class="rooms" id="rooms">
-    <h2>Our Rooms</h2>
-    <div class="room-container">
-      <div class="room-card">
-        <img src="https://i.postimg.cc/gjrhb45R/f7e75872-f3dc-4ae9-86f0-3ef7f961ce81.png" alt="Standard Non-AC Room" />
-        <h3>Standard Non‑AC</h3>
-        <p>₹1400 / night</p>
-        <ul>
-          <li>Queen Bed</li>
-          <li>Free Wi‑Fi</li>
-          <li>Attached Bathroom</li>
-        </ul>
-      </div>
-      <div class="room-card">
-        <img src="https://i.postimg.cc/gjrhb45R/f7e75872-f3dc-4ae9-86f0-3ef7f961ce81.png" alt="Deluxe AC Room" />
-        <h3>Deluxe AC with Balcony</h3>
-        <p>₹1700 / night</p>
-        <ul>
-          <li>AC + Balcony</li>
-          <li>Smart TV</li>
-          <li>Complimentary Breakfast</li>
-        </ul>
-      </div>
-    </div>
-  </section>  <!-- Booking Form Section -->  <section class="booking" id="booking">
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking">
     <h2>Book Your Stay</h2>
     <form id="bookingForm">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="tel" name="phone" placeholder="Phone Number" required />
       <select name="roomType" required>
         <option value="">Select Room Type</option>
-        <option value="standard">Standard Non‑AC</option>
-        <option value="deluxe">Deluxe AC with Balcony</option>
+        <option value="Standard">Standard Non-AC</option>
+        <option value="Deluxe">Deluxe AC with Balcony</option>
       </select>
       <input type="date" name="checkin" required />
       <input type="date" name="checkout" required />
       <button type="submit" class="btn-primary">Confirm Booking</button>
+      <div class="form-message" id="formMsg"></div>
     </form>
-    <p id="formMsg" class="form-message"></p>
-  </section>  <!-- Reviews Section -->  <section class="reviews" id="reviews">
-    <h2>Guest Reviews</h2>
-    <div class="review-grid">
-      <div class="review-card">
-        <p>"Fantastic service and very comfortable room!"</p>
-        <h4>– Ayesha R.</h4>
-      </div>
-      <div class="review-card">
-        <p>"Affordable and neat. Highly recommended for families."</p>
-        <h4>– Nikhil P.</h4>
-      </div>
-      <div class="review-card">
-        <p>"Loved the deluxe balcony room. Great ambiance."</p>
-        <h4>– Sneha M.</h4>
-      </div>
-    </div>
-  </section>  <!-- Contact Section -->  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>SS Crown Inn, Near City Center, Bengaluru</p>
-    <p>Phone: <a href="tel:+919999999999">+91 99999 99999</a></p>
-    <p><a href="https://wa.me/919999999999" class="btn-whatsapp">Chat on WhatsApp</a></p>
-    <p><a href="https://maps.google.com" target="_blank">View on Google Maps</a></p>
-  </section>  <footer>
-    <p>© 2025 SS Crown Inn. All rights reserved.</p>
-  </footer>  <script src="js/scripts.js"></script></body>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/scripts.js"></script>
+</body>
 </html>
