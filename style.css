@@ -120,13 +120,9 @@ button:hover {
   background: #555;
 }
 
-/* Welcome Section */
+/* Welcome Section (Normal Size) */
 .welcome-section {
   background: #f5f7ff;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 60px 20px;
 }
 .welcome-content {
@@ -135,6 +131,7 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
+  margin: auto;
 }
 .text {
   flex: 1 1 45%;
@@ -199,18 +196,20 @@ button:hover {
   opacity: 1;
 }
 .room-card h3 {
-  font-size: 1.4rem;
-  margin: 15px 0 10px;
+  font-size: 1.6rem;
+  margin: 20px 0 12px;
 }
 .room-card .price {
+  font-size: 1.2rem;
   font-weight: 600;
   color: #ffb347;
 }
 .room-card .price span {
+  font-size: 1rem;
   color: #aaa;
 }
 .room-card .gst-note {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #888;
 }
 
@@ -225,13 +224,15 @@ button:hover {
   text-align: center;
 }
 .photo-gallery .section-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 .photo-gallery .section-header p {
+  font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto 30px;
   color: #555;
+  line-height: 1.7;
 }
 .carousel {
   position: relative;
