@@ -1,40 +1,41 @@
-const testimonials = document.querySelectorAll('.testimonial-item');
-const prevBtn = document.querySelector('.testimonials .prev');
-const nextBtn = document.querySelector('.testimonials .next');
-const dotsContainer = document.querySelector('.testimonial-dots');
-let currentTestimonial = 0;
+const testimonialSection = document.querySelector('.testimonials');
+const testimonials = testimonialSection.querySelectorAll('.testimonial-item');
+const testimonialDotsContainer = testimonialSection.querySelector('.testimonial-dots');
+const testimonialPrevBtn = testimonialSection.querySelector('.prev');
+const testimonialNextBtn = testimonialSection.querySelector('.next');
+let testimonialCurrent = 0;
 
 // Create dots
 testimonials.forEach((_, i) => {
   const dot = document.createElement('span');
   dot.addEventListener('click', () => showTestimonial(i));
-  dotsContainer.appendChild(dot);
+  testimonialDotsContainer.appendChild(dot);
 });
-const dots = dotsContainer.querySelectorAll('span');
+const testimonialDots = testimonialDotsContainer.querySelectorAll('span');
 
 function showTestimonial(index) {
   testimonials.forEach(t => t.classList.remove('active'));
-  dots.forEach(d => d.classList.remove('active-dot'));
+  testimonialDots.forEach(d => d.classList.remove('active-dot'));
   testimonials[index].classList.add('active');
-  dots[index].classList.add('active-dot');
-  currentTestimonial = index;
+  testimonialDots[index].classList.add('active-dot');
+  testimonialCurrent = index;
 }
 
 function nextTestimonial() {
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  showTestimonial(currentTestimonial);
+  testimonialCurrent = (testimonialCurrent + 1) % testimonials.length;
+  showTestimonial(testimonialCurrent);
 }
 
 function prevTestimonial() {
-  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-  showTestimonial(currentTestimonial);
+  testimonialCurrent = (testimonialCurrent - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(testimonialCurrent);
 }
 
-nextBtn.addEventListener('click', nextTestimonial);
-prevBtn.addEventListener('click', prevTestimonial);
+testimonialNextBtn.addEventListener('click', nextTestimonial);
+testimonialPrevBtn.addEventListener('click', prevTestimonial);
 
-// Auto-play
+// Auto play
 setInterval(nextTestimonial, 5000);
 
 // Initialize
-showTestimonial(currentTestimonial);
+showTestimonial(testimonialCurrent);
