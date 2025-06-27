@@ -1,45 +1,182 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SS Crown Inn - Affordable comfort with royal elegance" />
-  <title>SS Crown Inn</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SS CROWN INN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<body>  <header class="header-section">
-    <div class="container">
-      <div class="site-logo">
-        <img src="https://i.postimg.cc/76zfQKZh/file-00000000e37c6246a72156057436b6fb.png" alt="SS Crown Inn Logo" />
+<body>
+  <header>
+  <div class="logo">
+    <img src="https://i.postimg.cc/76zfQKZh/file-00000000e37c6246a72156057436b6fb.png" alt="Sogo Hotel Logo" style="height:80px;">
+  </div>
+  <div class="menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <p class="subtitle">WELCOME TO SS CROWN INN</p>
+    <h1>A Best Place To Stay</h1>
+    <div class="scroll-down">&#x25BC;</div>
+  </div>
+</section>
+
+<section class="booking">
+  <form>
+    <div class="form-group">
+      <label>Check In</label>
+      <input type="date" />
+    </div>
+    <div class="form-group">
+      <label>Check Out</label>
+      <input type="date" />
+    </div>
+    <div class="form-group">
+      <label>Adults</label>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4+</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Children</label>
+      <select>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3+</option>
+      </select>
+    </div>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+ 
+ <section class="welcome-section">
+  <div class="welcome-content">
+    <div class="text">
+      <h2>Welcome!</h2>
+      <p>
+        Experience the perfect blend of comfort, elegance, and exceptional service at SS Crown Inn. Nestled in a breathtaking destination, our hotel offers beautifully designed rooms, exquisite dining experiences, and unforgettable memories. Whether you’re here for relaxation or adventure, we promise a stay that feels like home.
+      </p>
+      <div class="buttons">
+        <a href="#" class="btn-primary">Learn More</a>
+        <span class="or"></span>
+
       </div>
-      <nav class="main-menu">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul id="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#rooms">Rooms</a></li>
-          <li><a href="#booking">Booking</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </div>
-  </header>  <section class="hero-section" id="hero">
-    <div class="hero-content" data-aos="zoom-in">
-      <h1>SS CROWN INN</h1>
-      <p>Affordable Comfort with Royal Experience</p>
-      <a href="#booking" class="site-btn">Book Now</a>
+    <div class="images">
+      <img src="https://i.postimg.cc/bY9Yx3bP/d806871d-cdac-4a32-9e88-021f32d9d425.png" alt="Hotel Room" class="main-img">
     </div>
-  </section>  <section id="rooms">
-    <h2>Our Rooms</h2>
-    <!-- Add room cards here -->
-  </section>  <section id="booking">
-    <h2>Book a Room</h2>
-    <!-- Booking form here -->
-  </section>  <section id="contact">
-    <h2>Contact Us</h2>
-    <!-- Contact details -->
-  </section>  <footer>
-    <p>&copy; 2025 SS Crown Inn. All rights reserved.</p>
-  </footer>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
-    AOS.init();
-  </script>  <script src="js/main.js"></script></body>
+  </div>
+</section>
+
+ <div class="room-cards">
+
+  <!-- Room 1: Standard Non A/C -->
+  <div class="room-card">
+    <div class="slider">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Standard Non AC 1" class="active">
+      <img src="https://images.unsplash.com/photo-1600585154401-22d5d8605b31" alt="Standard Non AC 2">
+      <img src="https://images.unsplash.com/photo-1600585154461-51e66b3f49b5" alt="Standard Non AC 3">
+    </div>
+    <h3>Standard Non A/C Room</h3>
+    <p class="price">₹1400 <span>/ PER NIGHT</span></p>
+    <p class="gst-note">+ ₹168 GST (12%)</p>
+  </div>
+
+  <!-- Room 2: Deluxe A/C Room with Balcony -->
+  <div class="room-card">
+    <div class="slider">
+      <img src="https://i.postimg.cc/gjrhb45R/f7e75872-f3dc-4ae9-86f0-3ef7f961ce81.png" alt="Deluxe A/C Room 1" class="active">
+      <img src="https://i.postimg.cc/L40f3KYV/608e08e0-d669-4445-bb53-7eafe21fad9f.png" alt="Deluxe A/C Room 2">
+      <img src="https://i.postimg.cc/yx5Z1c4G/078d033a-de3c-48f0-b00f-26ddc78d61d5.png" alt="Deluxe A/C Room 3">
+    </div>
+    <h3>Deluxe A/C with Balcony</h3>
+    <p class="price">₹1700 <span>/ PER NIGHT</span></p>
+    <p class="gst-note">+ ₹204 GST (12%)</p>
+  </div>
+
+  <!-- Room 3: Family Suite Room -->
+  <div class="room-card">
+    <div class="slider">
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" alt="Family Suite Room 1" class="active">
+      <img src="https://images.unsplash.com/photo-1611892440505-51a793e35d43" alt="Family Suite Room 2">
+      <img src="https://images.unsplash.com/photo-1611892440506-60a794e46d54" alt="Family Suite Room 3">
+    </div>
+    <h3>Family Suite Room Non A/C</h3>
+    <p class="price">₹2500 <span>/ PER NIGHT</span></p>
+    <p class="gst-note">+ ₹300 GST (12%)</p>
+  </div>
+
+</div>
+
+  <section class="photo-gallery">
+  <div class="section-header">
+    <h2>Photos</h2>
+    <p>
+      Take a glimpse into the serene beauty and refined comfort of our spaces. From relaxing bedrooms to ambient interiors, every corner of our hotel is designed to make you feel at home.
+    </p>
+  </div>
+
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-track">
+      <img src="https://images.unsplash.com/photo-1582719478148-d3b8b124b4f8" alt="Photo 1" class="active">
+      <img src="https://images.unsplash.com/photo-1611892440505-51a793e35d43" alt="Photo 2">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Photo 3">
+      <img src="https://images.unsplash.com/photo-1611892440506-60a794e46d54" alt="Photo 4">
+      <img src="https://images.unsplash.com/photo-1582719478179-4c4a3f4f4f4f" alt="Photo 5">
+    </div>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
+  </div>
+</section>
+<section class="testimonials">
+  <h2>People Says</h2>
+
+  <div class="testimonial-carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="testimonial-track">
+      <div class="testimonial-item active">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jean Smith">
+        <p class="quote">
+          “A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.”
+        </p>
+        <p class="author">— Jean Smith</p>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
+        <p class="quote">
+          “Even the all-powerful Pointing has no control about the blind texts. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.”
+        </p>
+        <p class="author">— John Doe</p>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John Doe">
+        <p class="quote">
+          “When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village.”
+        </p>
+        <p class="author">— John Doe</p>
+      </div>
+    </div>
+
+    <button class="next">&#10095;</button>
+  </div>
+
+  <div class="testimonial-dots"></div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
 </html>
