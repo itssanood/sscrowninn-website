@@ -7,118 +7,131 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
+  <!-- Header -->
   <header>
-  <div class="logo">
-    <img src="https://i.postimg.cc/76zfQKZh/file-00000000e37c6246a72156057436b6fb.png" alt="Sogo Hotel Logo" style="height:80px;">
-  </div>
-  <div class="menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
+    <div class="logo">
+      <img src="https://i.postimg.cc/76zfQKZh/file-00000000e37c6246a72156057436b6fb.png" alt="Logo">
+    </div>
+    <div class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="content">
-    <p class="subtitle">WELCOME TO SS CROWN INN</p>
-    <h1>A Best Place To Stay</h1>
-    <div class="scroll-down">&#x25BC;</div>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <p class="subtitle">WELCOME TO SS CROWN INN</p>
+      <h1>A Best Place To Stay</h1>
+      <p>Experience warm hospitality and exceptional comfort during your visit.</p>
+      <div class="scroll-down">&#x25BC;</div>
+    </div>
+  </section>
 
-<section class="booking">
-  <form>
-    <div class="form-group">
-      <label>Check In</label>
-      <input type="date" />
-    </div>
-    <div class="form-group">
-      <label>Check Out</label>
-      <input type="date" />
-    </div>
-    <div class="form-group">
-      <label>Adults</label>
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4+</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Children</label>
-      <select>
-        <option>0</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3+</option>
-      </select>
-    </div>
-    <button type="submit">Book Now</button>
-  </form>
-</section>
- 
- <section class="welcome-section">
-  <div class="welcome-content">
-    <div class="text">
-      <h2>Welcome!</h2>
-      <p>
-        Experience the perfect blend of comfort, elegance, and exceptional service at SS Crown Inn. Nestled in a breathtaking destination, our hotel offers beautifully designed rooms, exquisite dining experiences, and unforgettable memories. Whether you’re here for relaxation or adventure, we promise a stay that feels like home.
-      </p>
-      <div class="buttons">
+  <!-- Booking -->
+  <section class="booking">
+    <form>
+      <div class="form-group">
+        <label>Adults</label>
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Children</label>
+        <select>
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3+</option>
+        </select>
+      </div>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Welcome -->
+  <section class="welcome-section">
+    <div class="welcome-content">
+      <div class="text">
+        <h2>Welcome!</h2>
+        <p>
+          Discover the blend of elegance and comfort. Whether you’re here for leisure or business, our facilities and personalized services will ensure a memorable stay.
+        </p>
         <a href="#" class="btn-primary">Learn More</a>
-        <span class="or"></span>
-
+      </div>
+      <div class="images">
+        <img src="https://i.postimg.cc/bY9Yx3bP/d806871d-cdac-4a32-9e88-021f32d9d425.png" alt="Hotel Room" class="main-img">
       </div>
     </div>
-    <div class="images">
-      <img src="https://i.postimg.cc/bY9Yx3bP/d806871d-cdac-4a32-9e88-021f32d9d425.png" alt="Hotel Room" class="main-img">
+  </section>
+
+  <!-- Room Cards -->
+  <section class="room-cards">
+    <!-- Room 1 -->
+    <div class="room-card">
+      <div class="slider">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="" class="active">
+        <img src="https://images.unsplash.com/photo-1600585154401-22d5d8605b31" alt="">
+        <img src="https://images.unsplash.com/photo-1600585154461-51e66b3f49b5" alt="">
+      </div>
+      <h3>Standard Non A/C Room</h3>
+      <p class="description">A cozy retreat with essential amenities perfect for solo travelers.</p>
+      <div class="icons">
+        <span>🛏️</span>
+        <span>📺</span>
+        <span>🚿</span>
+      </div>
+      <p class="price">₹1400 <span>/ PER NIGHT</span></p>
+      <p class="gst-note">+ ₹168 GST (12%)</p>
     </div>
-  </div>
-</section>
 
- <div class="room-cards">
-
-  <!-- Room 1: Standard Non A/C -->
-  <div class="room-card">
-    <div class="slider">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Standard Non AC 1" class="active">
-      <img src="https://images.unsplash.com/photo-1600585154401-22d5d8605b31" alt="Standard Non AC 2">
-      <img src="https://images.unsplash.com/photo-1600585154461-51e66b3f49b5" alt="Standard Non AC 3">
+    <!-- Room 2 -->
+    <div class="room-card">
+      <div class="slider">
+        <img src="https://i.postimg.cc/gjrhb45R/f7e75872-f3dc-4ae9-86f0-3ef7f961ce81.png" alt="" class="active">
+        <img src="https://i.postimg.cc/L40f3KYV/608e08e0-d669-4445-bb53-7eafe21fad9f.png" alt="">
+        <img src="https://i.postimg.cc/yx5Z1c4G/078d033a-de3c-48f0-b00f-26ddc78d61d5.png" alt="">
+      </div>
+      <h3>Deluxe A/C with Balcony</h3>
+      <p class="description">Spacious room featuring air conditioning and a private balcony view.</p>
+      <div class="icons">
+        <span>🛏️</span>
+        <span>❄️</span>
+        <span>🌿</span>
+      </div>
+      <p class="price">₹1700 <span>/ PER NIGHT</span></p>
+      <p class="gst-note">+ ₹204 GST (12%)</p>
     </div>
-    <h3>Standard Non A/C Room</h3>
-    <p class="price">₹1400 <span>/ PER NIGHT</span></p>
-    <p class="gst-note">+ ₹168 GST (12%)</p>
-  </div>
 
-  <!-- Room 2: Deluxe A/C Room with Balcony -->
-  <div class="room-card">
-    <div class="slider">
-      <img src="https://i.postimg.cc/gjrhb45R/f7e75872-f3dc-4ae9-86f0-3ef7f961ce81.png" alt="Deluxe A/C Room 1" class="active">
-      <img src="https://i.postimg.cc/L40f3KYV/608e08e0-d669-4445-bb53-7eafe21fad9f.png" alt="Deluxe A/C Room 2">
-      <img src="https://i.postimg.cc/yx5Z1c4G/078d033a-de3c-48f0-b00f-26ddc78d61d5.png" alt="Deluxe A/C Room 3">
+    <!-- Room 3 -->
+    <div class="room-card">
+      <div class="slider">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" alt="" class="active">
+        <img src="https://images.unsplash.com/photo-1611892440505-51a793e35d43" alt="">
+        <img src="https://images.unsplash.com/photo-1611892440506-60a794e46d54" alt="">
+      </div>
+      <h3>Family Suite Room</h3>
+      <p class="description">Perfect for families, with spacious interiors and modern facilities.</p>
+      <div class="icons">
+        <span>🛏️</span>
+        <span>👨‍👩‍👧‍👦</span>
+        <span>📺</span>
+      </div>
+      <p class="price">₹2500 <span>/ PER NIGHT</span></p>
+      <p class="gst-note">+ ₹300 GST (12%)</p>
     </div>
-    <h3>Deluxe A/C with Balcony</h3>
-    <p class="price">₹1700 <span>/ PER NIGHT</span></p>
-    <p class="gst-note">+ ₹204 GST (12%)</p>
-  </div>
+  </section>
 
-  <!-- Room 3: Family Suite Room -->
-  <div class="room-card">
-    <div class="slider">
-      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" alt="Family Suite Room 1" class="active">
-      <img src="https://images.unsplash.com/photo-1611892440505-51a793e35d43" alt="Family Suite Room 2">
-      <img src="https://images.unsplash.com/photo-1611892440506-60a794e46d54" alt="Family Suite Room 3">
-    </div>
-    <h3>Family Suite Room Non A/C</h3>
-    <p class="price">₹2500 <span>/ PER NIGHT</span></p>
-    <p class="gst-note">+ ₹300 GST (12%)</p>
-  </div>
-
-</div>
-
+  <!-- Photo Gallery, Testimonials, Footer -->
+  <!-- You can keep the same structure you already have for those sections -->
   <section class="photo-gallery">
   <div class="section-header">
     <h2>Photos</h2>
