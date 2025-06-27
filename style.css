@@ -7,6 +7,8 @@
 body, html {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background: #F9F7F3;
+  color: #222;
 }
 
 /* Header */
@@ -60,10 +62,9 @@ header {
   font-size: 0.9em;
   margin-bottom: 10px;
 }
-h1 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8em;
-  font-weight: 700;
+  color: #8B5E3C;
 }
 .scroll-down {
   margin-top: 20px;
@@ -77,13 +78,13 @@ h1 {
 
 /* Booking Section */
 .booking {
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   width: 90%;
   max-width: 1000px;
   margin: -50px auto 40px auto;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 2;
   position: relative;
 }
@@ -110,17 +111,17 @@ input, select {
 }
 button {
   padding: 10px 20px;
-  background: #333;
+  background: #8B5E3C;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 button:hover {
-  background: #555;
+  background: #A67B5B;
 }
 
-/* Welcome Section (Normal Size) */
+/* Welcome Section */
 .welcome-section {
   background: #f5f7ff;
   padding: 60px 20px;
@@ -143,7 +144,7 @@ button:hover {
 }
 .text p {
   font-size: 1rem;
-  color: #555;
+  color: #444;
   line-height: 1.6;
   margin-bottom: 25px;
 }
@@ -153,15 +154,18 @@ button:hover {
   gap: 12px;
 }
 .btn-primary {
-  background: #ffb347;
+  background: #8B5E3C;
   padding: 10px 20px;
   border-radius: 20px;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
+.btn-primary:hover {
+  background: #A67B5B;
+}
 .btn-text {
-  color: #ffb347;
+  color: #8B5E3C;
   font-weight: bold;
   text-decoration: none;
 }
@@ -177,17 +181,6 @@ button:hover {
   width: 100%;
   border-radius: 10px;
 }
-.circle-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
-}
 
 /* Room Cards */
 .room-cards {
@@ -197,12 +190,11 @@ button:hover {
   gap: 40px;
   padding: 80px 20px;
   min-height: 100vh;
-  background: #fff;
+  background: #ffffff;
 }
-
 .room-card {
-  flex: 1 1 300px;   /* Allow cards to grow wider */
-  max-width: 400px;  /* Limit max width */
+  flex: 1 1 300px;
+  max-width: 400px;
   text-align: center;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -210,19 +202,16 @@ button:hover {
   background: #fafafa;
   transition: transform 0.3s ease;
 }
-
 .room-card:hover {
   transform: translateY(-5px);
 }
-
 .slider {
   position: relative;
   width: 100%;
-  padding-top: 66%; /* 3:2 Aspect Ratio */
+  padding-top: 66%;
   overflow: hidden;
   border-radius: 8px;
 }
-
 .slider img {
   position: absolute;
   top: 0;
@@ -233,27 +222,22 @@ button:hover {
   opacity: 0;
   transition: opacity 1s ease;
 }
-
 .slider img.active {
   opacity: 1;
 }
-
 .room-card h3 {
   font-size: 1.6rem;
   margin: 20px 0 12px;
 }
-
 .room-card .price {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #ffb347;
+  color: #8B5E3C;
 }
-
 .room-card .price span {
   font-size: 1rem;
   color: #aaa;
 }
-
 .room-card .gst-note {
   font-size: 0.9rem;
   color: #888;
@@ -277,7 +261,7 @@ button:hover {
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto 30px;
-  color: #555;
+  color: #444;
   line-height: 1.7;
 }
 .carousel {
@@ -286,15 +270,13 @@ button:hover {
   width: 100%;
   margin: auto;
 }
-
 .carousel-track {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%;
   border-radius: 10px;
 }
-
 .carousel-track img {
   position: absolute;
   top: 0;
@@ -305,17 +287,15 @@ button:hover {
   opacity: 0;
   transition: opacity 1s ease;
 }
-
 .carousel-track img.active {
   opacity: 1;
   z-index: 1;
 }
-
 .carousel button {
   background: transparent;
   border: none;
   font-size: 2rem;
-  color: #444;
+  color: #8B5E3C;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -337,12 +317,12 @@ button:hover {
   cursor: pointer;
 }
 .dots .active-dot {
-  background: #444;
+  background: #8B5E3C;
 }
 
 /* Testimonials */
 .testimonials {
-  background: #fff;
+  background: #ffffff;
   padding: 80px 20px;
   min-height: 100vh;
   display: flex;
@@ -386,7 +366,7 @@ button:hover {
 }
 .testimonial-item .quote {
   font-size: 1rem;
-  color: #555;
+  color: #444;
   max-width: 600px;
   margin: 0 auto 15px;
   line-height: 1.6;
@@ -399,7 +379,7 @@ button:hover {
   background: transparent;
   border: none;
   font-size: 2rem;
-  color: #444;
+  color: #8B5E3C;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -420,7 +400,7 @@ button:hover {
   cursor: pointer;
 }
 .testimonial-dots .active-dot {
-  background: #444;
+  background: #8B5E3C;
 }
 
 /* Footer */
@@ -442,14 +422,14 @@ button:hover {
 .footer-top .reserve-button {
   display: inline-block;
   padding: 10px 25px;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #8B5E3C;
+  color: #8B5E3C;
   border-radius: 25px;
   transition: background 0.3s, color 0.3s;
 }
 .footer-top .reserve-button:hover {
-  background: #fff;
-  color: #222;
+  background: #8B5E3C;
+  color: #fff;
 }
 .footer-content {
   display: flex;
@@ -475,7 +455,7 @@ button:hover {
   transition: color 0.3s;
 }
 .footer-column ul li a:hover {
-  color: #fff;
+  color: #8B5E3C;
 }
 .footer-column p {
   margin-bottom: 15px;
