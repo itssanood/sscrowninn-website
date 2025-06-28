@@ -36,7 +36,7 @@ header {
   background: white;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
   background: url('https://i.postimg.cc/9QwdWPXj/Background-image.png') no-repeat center center/cover;
@@ -59,11 +59,6 @@ header {
   color: white;
   z-index: 1;
 }
-.content h1,
-.content .subtitle,
-.content p {
-  color: white;
-}
 .subtitle {
   letter-spacing: 2px;
   font-size: 0.9em;
@@ -84,16 +79,15 @@ h1 {
   50% { transform: translateY(8px); }
 }
 
-/* Booking Section */
+/* Booking */
 .booking {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 40px 20px;
   width: 90%;
   max-width: 1000px;
   margin: -50px auto 40px auto;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  z-index: 2;
+  border-radius: 10px;
   position: relative;
 }
 form {
@@ -101,7 +95,6 @@ form {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: space-between;
-  align-items: center;
 }
 .form-group {
   flex: 1 1 200px;
@@ -132,6 +125,9 @@ button:hover {
 /* Welcome Section */
 .welcome-section {
   background: #f5f7ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   padding: 60px 20px;
 }
 .welcome-content {
@@ -140,7 +136,6 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   gap: 40px;
 }
 .text {
@@ -159,7 +154,6 @@ button:hover {
 }
 .buttons {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 .btn-primary {
@@ -179,6 +173,7 @@ button:hover {
   gap: 40px;
   padding: 60px 20px;
   background: #fff;
+  min-height: 100vh;
 }
 .room-card {
   flex: 1 1 300px;
@@ -217,22 +212,17 @@ button:hover {
   font-size: 0.95rem;
   color: #555;
   margin: 12px 0;
-  line-height: 1.5;
 }
 .room-card .icons {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 10px;
   font-size: 1.2rem;
   color: #ffb347;
 }
 .room-card .price {
   font-weight: 600;
   color: #ffb347;
-}
-.room-card .price span {
-  color: #aaa;
 }
 .room-card .gst-note {
   font-size: 0.8rem;
@@ -242,8 +232,12 @@ button:hover {
 /* Photo Gallery */
 .photo-gallery {
   background: #f5f7ff;
-  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  padding: 60px 20px;
 }
 .photo-gallery .section-header h2 {
   font-size: 2.5rem;
@@ -278,7 +272,6 @@ button:hover {
 }
 .carousel-track img.active {
   opacity: 1;
-  z-index: 1;
 }
 .carousel button {
   background: transparent;
@@ -288,7 +281,6 @@ button:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
   cursor: pointer;
 }
 .carousel .prev { left: -40px; }
@@ -312,8 +304,12 @@ button:hover {
 /* Testimonials */
 .testimonials {
   background: #fff;
-  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  padding: 60px 20px;
 }
 .testimonials h2 {
   font-size: 2.5rem;
@@ -340,13 +336,11 @@ button:hover {
 }
 .testimonial-item.active {
   opacity: 1;
-  position: relative;
 }
 .testimonial-item img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 20px;
 }
 .testimonial-item .quote {
@@ -354,7 +348,6 @@ button:hover {
   color: #555;
   max-width: 600px;
   margin: 0 auto 15px;
-  line-height: 1.6;
 }
 .testimonial-item .author {
   font-style: italic;
@@ -401,7 +394,6 @@ button:hover {
 }
 .footer-top h2 {
   font-size: 1.8rem;
-  margin-bottom: 15px;
   color: #fff;
 }
 .footer-top .reserve-button {
@@ -437,7 +429,6 @@ button:hover {
 .footer-column ul li a {
   color: #ccc;
   text-decoration: none;
-  transition: color 0.3s;
 }
 .footer-column ul li a:hover {
   color: #fff;
@@ -447,22 +438,17 @@ button:hover {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .welcome-content {
+@media (max-width: 768px) {
+  .welcome-content,
+  .footer-content {
     flex-direction: column;
     text-align: center;
   }
-}
-@media (max-width: 768px) {
   .room-cards {
     flex-direction: column;
     align-items: center;
   }
   .room-card {
     max-width: 90%;
-  }
-  .carousel button,
-  .testimonial-carousel button {
-    font-size: 1.5rem;
   }
 }
