@@ -57,6 +57,11 @@ header {
   color: white;
   z-index: 1;
 }
+.content h1,
+.content .subtitle,
+.content p {
+  color: white;
+}
 .subtitle {
   letter-spacing: 2px;
   font-size: 0.9em;
@@ -228,6 +233,20 @@ button:hover {
   font-size: 1.6rem;
   margin: 20px 0 12px;
 }
+.room-card .description {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+.room-card .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #8B5E3C;
+}
 .room-card .price {
   font-size: 1.2rem;
   font-weight: 600;
@@ -240,166 +259,6 @@ button:hover {
 .room-card .gst-note {
   font-size: 0.9rem;
   color: #888;
-}
-
-/* Photo Gallery */
-.photo-gallery {
-  background: #D8CEC3;
-  padding: 80px 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.photo-gallery .section-header h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-.photo-gallery .section-header p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  color: #444;
-  line-height: 1.7;
-}
-.carousel {
-  position: relative;
-  max-width: 800px;
-  width: 100%;
-  margin: auto;
-}
-.carousel-track {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
-  border-radius: 10px;
-}
-.carousel-track img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-.carousel-track img.active {
-  opacity: 1;
-  z-index: 1;
-}
-.carousel button {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  color: #8B5E3C;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  cursor: pointer;
-}
-.carousel .prev { left: -40px; }
-.carousel .next { right: -40px; }
-.dots {
-  margin-top: 20px;
-}
-.dots span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #bbb;
-  border-radius: 50%;
-  margin: 0 4px;
-  cursor: pointer;
-}
-.dots .active-dot {
-  background: #8B5E3C;
-}
-
-/* Testimonials */
-.testimonials {
-  background: #F3ECE4;
-  padding: 80px 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.testimonial-carousel {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-}
-.testimonial-track {
-  position: relative;
-  overflow: hidden;
-  min-height: 250px;
-}
-.testimonial-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  padding: 0 20px;
-}
-.testimonial-item.active {
-  opacity: 1;
-  position: relative;
-}
-.testimonial-item img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-.testimonial-item .quote {
-  font-size: 1rem;
-  color: #444;
-  max-width: 600px;
-  margin: 0 auto 15px;
-  line-height: 1.6;
-}
-.testimonial-item .author {
-  font-style: italic;
-  color: #777;
-}
-.testimonial-carousel button {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  color: #8B5E3C;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.testimonial-carousel .prev { left: -40px; }
-.testimonial-carousel .next { right: -40px; }
-.testimonial-dots {
-  margin-top: 20px;
-}
-.testimonial-dots span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #bbb;
-  border-radius: 50%;
-  margin: 0 4px;
-  cursor: pointer;
-}
-.testimonial-dots .active-dot {
-  background: #8B5E3C;
 }
 
 /* Footer */
