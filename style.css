@@ -7,6 +7,8 @@
 body, html {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background: #f9f7f3;
+  color: #222;
 }
 
 /* Header */
@@ -46,14 +48,21 @@ header {
 }
 .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.4);
 }
 .content {
   position: relative;
   color: white;
   z-index: 1;
+}
+.content h1,
+.content .subtitle,
+.content p {
+  color: white;
 }
 .subtitle {
   letter-spacing: 2px;
@@ -127,9 +136,11 @@ button:hover {
 }
 .welcome-content {
   max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
 }
 .text {
@@ -166,7 +177,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  padding: 80px 20px;
+  padding: 60px 20px;
   background: #fff;
 }
 .room-card {
@@ -201,6 +212,20 @@ button:hover {
 .room-card h3 {
   font-size: 1.4rem;
   margin: 15px 0 10px;
+}
+.room-card .description {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+.room-card .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffb347;
 }
 .room-card .price {
   font-weight: 600;
@@ -238,7 +263,7 @@ button:hover {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%;
   border-radius: 10px;
 }
 .carousel-track img {
@@ -422,23 +447,19 @@ button:hover {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .room-card {
-    flex: 1 1 45%;
-  }
-}
-@media (max-width: 768px) {
-  .welcome-content,
-  .footer-content {
+@media (max-width: 1024px) {
+  .welcome-content {
     flex-direction: column;
     text-align: center;
   }
+}
+@media (max-width: 768px) {
   .room-cards {
     flex-direction: column;
     align-items: center;
   }
   .room-card {
-    flex: 1 1 100%;
+    max-width: 90%;
   }
   .carousel button,
   .testimonial-carousel button {
