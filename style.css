@@ -345,3 +345,85 @@ button:hover {
     text-align: center;
   }
 }
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .welcome-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text, .images {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .room-cards {
+    gap: 30px;
+  }
+  .room-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero .subtitle {
+    font-size: 0.8rem;
+  }
+  .booking form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .booking {
+    padding: 20px 10px;
+  }
+  .room-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .room-card {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+  .photo-gallery .section-header h2,
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+  .carousel button,
+  .testimonial-carousel button {
+    font-size: 1.5rem;
+    left: -20px;
+    right: -20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .room-card h3 {
+    font-size: 1.3rem;
+  }
+  .room-card .price {
+    font-size: 1rem;
+  }
+  .room-card .description {
+    font-size: 0.9rem;
+  }
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .booking {
+    padding: 15px 8px;
+  }
+}
